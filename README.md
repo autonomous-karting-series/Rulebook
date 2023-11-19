@@ -8,6 +8,7 @@ This repository contains the development pages and official document for the Aut
   - [Mechanical](#mechanical)
   - [Safety](#safety)
   - [Race Procedure](#race-procedure)
+  - [Appendix](#appendix)
 
 ## [Electrical](./Electrical/electrical.md)
 
@@ -18,3 +19,5 @@ This repository contains the development pages and official document for the Aut
 ## [Safety](./Safety/safety.md)
 
 ## [Race Procedure](./Race_Procedure/race_procedure.md)
+
+## [Appendix](./Appendix.md)
