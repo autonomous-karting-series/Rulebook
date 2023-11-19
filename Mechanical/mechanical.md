@@ -77,7 +77,7 @@ These rules are open to interpretation where specifics are not given. This means
 
  1. Teams must provide a Bill of Materials for all mechanical components __NOT__ mounted internally.
     1. Each mechanical component must be represented by an individual section in the BOM.
- 2. A Team's BOM cost shall not exceed $10,000 USD.
+ 2. A Team's Mechanical BOM cost shall not exceed $10,000 USD.
     * A team is able to estimate the cost of a component if it is unsure of the total value of the component. _This must be stated if the cost is estimated_.
 
 ## Resources
