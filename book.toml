@@ -1,0 +1,9 @@
+[book]
+authors = ["Siddharth Saha", "Andrew Goeden"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Autonomous Karting Series Rulebook"
+
+[output.html]
+mathjax-support = true
