@@ -13,3 +13,4 @@
  * Autonomous Driving - when the kart is being controlled only by the pre-programmed logic contained on the kart.
  * RC Driving - when the kart is being controlled by a remote controller exterior to the kart.
  * Deadman Switch - a switch on the remote controller that has a default value of off and must be held in the on state for the kart or controller to function.
+ * Pre-Mapping - utilizing data collected prior to a race start with the intent to use it to compete in the race.
