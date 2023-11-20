@@ -55,3 +55,4 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
 ### Long Range Control (Including Remote EStop)
  * [Crossfire Betaflight Article](https://oscarliang.com/crossfire-betaflight/) - Describes a solution for how to achieve long distance communication utilizing a 900MHz frequency.
  * [FrSky R9M Solution](https://oscarliang.com/setup-r9m-r9-mini-betaflight/) - Describes a solution utilizing used LoRa 900MHz frequency to achieve long distance.
+ * [Kar-Tech Wireless Estop System](https://kar-tech.com/wireless-estop-system-multiple-receiver.html) - Off the shelf solution for Remote Estop.
