@@ -16,6 +16,7 @@ These rules are open to interpretation where specifics are not given. This means
 ## Required Safety Components
 
  1. __Remote Estop__ must be tied to at minimum a physical controller.
+    1. Off the shelf Emergency Stop systems are allowed as long as they do not interfere with the track and has a physical trigger.
  2. __Remote Estop__ that when triggered does the following:
     1. Apply the brakes bringing the kart to a full stop.
     2. Disconnect power to the __Drivetrain__.
