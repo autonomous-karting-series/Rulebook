@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Autonomous Karting Series Rulebook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded "><a href="Administrative/administrative.html"><strong aria-hidden="true">1.</strong> Administrative</a></li><li class="chapter-item expanded "><a href="Mechanical/mechanical.html"><strong aria-hidden="true">2.</strong> Mechanical</a></li><li class="chapter-item expanded "><a href="Electrical/electrical.html"><strong aria-hidden="true">3.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="Race_Procedure/race_procedure.html"><strong aria-hidden="true">4.</strong> Race Procedure</a></li><li class="chapter-item expanded "><a href="Safety/safety.html"><strong aria-hidden="true">5.</strong> Safety</a></li><li class="chapter-item expanded "><a href="Software/software.html"><strong aria-hidden="true">6.</strong> Software</a></li><li class="chapter-item expanded "><a href="Appendix/appendix.html"><strong aria-hidden="true">7.</strong> Appendix</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Autonomous Karting Series Rulebook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<h2 id="what-is-the-competition"><a class="header" href="#what-is-the-competition">What is the competition</a></h2>
+<p>The Autonomous Karting Series is a collegiate competition series in which teams design, build, and race autonomous electric go-karts.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>This repository contains the development pages and official document for the Autonomous Karting Series Competition Rules. The individual sections of the rules have a folder with a markdown file for development and discussion purposes. The official document will be a protected latex file that requires approval to edit and modify.</p>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<p>For full documentation visit <a href="https://rust-lang.github.io/mdBook/">mdbook</a>.</p>
+<ul>
+<li><code>mdbook serve --open</code> - Start the live-reloading docs server.</li>
+<li><code>mdbook build</code> - Build the documentation site.</li>
+<li><code>mdbook help</code> - Print a help message.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="administrative"><a class="header" href="#administrative">Administrative</a></h1>
+<h2 id="what-is-the-competition-1"><a class="header" href="#what-is-the-competition-1">What is the competition</a></h2>
+<p>The Autonomous Karting Series is a collegiate competition series in which teams design, build, and race autonomous electric go-karts.</p>
+<h2 id="who-is-allowed-to-compete"><a class="header" href="#who-is-allowed-to-compete">Who is allowed to compete</a></h2>
+<ol>
+<li>Teams are required to be affiliated with an Academic Institution.</li>
+<li>A team can consist of members from more than one University, however any one person cannot be on multiple teams.</li>
+</ol>
+<h2 id="required-roles"><a class="header" href="#required-roles">Required Roles</a></h2>
+<ol>
+<li>All teams must establish at least one member as their Autonomous Safety Officer.
+<ul>
+<li>The Autonomous Safety Office will ensure that their team’s kart is operating in a safe manner on and off track.</li>
+</ul>
+</li>
+<li>All teams must establish at least one Designated Driver.
+<ul>
+<li>A Designated Driver is a separate person from a team’s Autonomous Safety Officer.</li>
+<li>A Designated Driver is responsible for driving the team’s kart as either a driver within the kart or when the kart is being operated remotely.</li>
+</ul>
+</li>
+</ol>
+<h2 id="documentation-requirements-from-teams"><a class="header" href="#documentation-requirements-from-teams">Documentation Requirements from teams</a></h2>
+<ol>
+<li>All participants must sign and submit a liability waiver.
+<ol>
+<li>All teams must submit the required videos and design documentation before specified race deadlines.</li>
+</ol>
+</li>
+<li>Some events may require certain components and features to be demonstrated in person.
+<ol>
+<li>Teams must be able to demonstrate all components and features in person if requested.</li>
+<li>Teams will be notified of specific demonstrations before the event.</li>
+</ol>
+</li>
+</ol>
+<h2 id="jurisdiction-of-rules"><a class="header" href="#jurisdiction-of-rules">Jurisdiction of rules</a></h2>
+<ol>
+<li>All announcements and comments posted on the official website of the competition are to be considered part of the official ruleset</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
+<h1 id="mechanical-rules"><a class="header" href="#mechanical-rules">Mechanical Rules</a></h1>
+<ul>
+<li><a href="Mechanical/mechanical.html#disclaimer">Disclaimer</a></li>
+<li><a href="Mechanical/mechanical.html#frame--chassis">Frame / Chassis</a></li>
+<li><a href="Mechanical/mechanical.html#tires">Tires</a></li>
+<li><a href="Mechanical/mechanical.html#brakes">Brakes</a></li>
+<li><a href="Mechanical/mechanical.html#weight">Weight</a></li>
+<li><a href="Mechanical/mechanical.html#mounting">Mounting</a></li>
+<li><a href="Mechanical/mechanical.html#materials">Materials</a></li>
+<li><a href="Mechanical/mechanical.html#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
+<li><a href="Mechanical/mechanical.html#resources">Resources</a>
+<ul>
+<li><a href="Mechanical/mechanical.html#go-kart-suppliers">Go Kart Suppliers</a></li>
+<li><a href="Mechanical/mechanical.html#tires-1">Tires</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
+<p>These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.</p>
+<h2 id="frame--chassis"><a class="header" href="#frame--chassis">Frame / Chassis</a></h2>
+<ol>
+<li>Any Commercial Full Size &quot;Sprint Kart&quot; chassis may be used</li>
+<li>Custom Built Kart chassis may be built provided they utilize standard Off-the-Shelf Components.
+<ol>
+<li>Off-the-Shelf Components can be defined as a part that is purchased from a Go-Kart parts provider.</li>
+<li>Examples of Off-the-Shelf components may contain but are not limited to:</li>
+</ol>
+<ul>
+<li>Tie Rods</li>
+<li>Brake Calipers</li>
+<li>Wheel Hubs</li>
+</ul>
+<ol start="3">
+<li>Any custom fabricated parts must have accompanying CAD models as well as relevant stress calculations.</li>
+<li>Custom Chassis wheelbase must be representative to the wheelbase of Commercial Chassis. <strong><em>If there is concern please contact the competition organizer.</em></strong></li>
+</ol>
+</li>
+<li>All Chassis components must be documented on a BOM declaring the part number and supplier.
+<ol>
+<li>For Custom Chassis the BOM must be broken down by fabricated parts.</li>
+</ol>
+</li>
+<li>All Chassis must include mounting points for Front and Rear bumpers.</li>
+</ol>
+<h2 id="tires"><a class="header" href="#tires">Tires</a></h2>
+<ol>
+<li>All teams must use the following tire sizes:
+<ul>
+<li>Front Tires - 10 x 4.50-5</li>
+<li>Rear Tires - 11 x 7.10-5</li>
+</ul>
+</li>
+<li>All teams must use the following compounds of slick tires:
+<ul>
+<li>Hoosier R60B</li>
+<li><em>Alternative brands and compounds must be requested for evaluation and if approved this section of the rules will be amended.</em></li>
+</ul>
+</li>
+<li>All teams must have the Wheel or Wheel Hub mounted to the chassis with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>.</li>
+<li>If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a <strong>Locking Nut</strong>. Safety Wires are not required.</li>
+</ol>
+<h2 id="brakes"><a class="header" href="#brakes">Brakes</a></h2>
+<ol>
+<li>All teams must at minimum have brakes on both rear tires.
+<ul>
+<li>A rear axle with 1 brake assembly attached will count for both rear tires.</li>
+</ul>
+</li>
+<li>Teams are encouraged to have brakes on all 4 wheels of the kart.</li>
+<li>Teams must be able to lock the brakes on any wheel with a brake attached.
+<ul>
+<li>This will be enforced by having the kart accelerate over a given distance and then the team must brake as much as needed to lock the brakes.</li>
+<li><em>At this time there is no maximum stopping distance.</em></li>
+</ul>
+</li>
+<li>All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.</li>
+</ol>
+<h2 id="weight"><a class="header" href="#weight">Weight</a></h2>
+<ol>
+<li>There is no maximum weight.</li>
+<li>There is a minimum weight of 250 pounds with all components attached to the kart.</li>
+</ol>
+<h2 id="mounting"><a class="header" href="#mounting">Mounting</a></h2>
+<ol>
+<li>Any component mounted directly to the chassis not mentioned already must be secured with a threadlocker.
+<ol>
+<li>Components that are needed to be removed and remounted frequently may be secured with a <strong>Locking Nut</strong>.</li>
+<li>Electrical wires may be secured with cable ties or similar items.</li>
+</ol>
+</li>
+<li><strong>Internally Mounted Components</strong> must be securely mounted such that the components do not become detached or loose inside their container.</li>
+<li>The above mounting rules are enforcable through visual inspection with physical inspections if there is concern.</li>
+</ol>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
+<ol>
+<li>Any non-Internally Mounted Component must not be subject to the following:
+<ul>
+<li>Acrylic</li>
+<li>Any <strong>Brittle Material</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="bom-bill-of-materials"><a class="header" href="#bom-bill-of-materials">BOM (Bill of Materials)</a></h2>
+<ol>
+<li>Teams must provide a Bill of Materials for all mechanical components <strong>NOT</strong> mounted internally.
+<ol>
+<li>Each mechanical component must be represented by an individual section in the BOM.</li>
+</ol>
+</li>
+<li>A Team's Mechanical BOM cost shall not exceed $10,000 USD.
+<ul>
+<li>A team is able to estimate the cost of a component if it is unsure of the total value of the component. <em>This must be stated if the cost is estimated</em>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p><strong>The following resources are not affiliated with Autonomous Karting Series Inc. but are included to aid teams in finding and sourcing components.</strong></p>
+<h3 id="go-kart-suppliers"><a class="header" href="#go-kart-suppliers">Go Kart Suppliers</a></h3>
+<ul>
+<li><a href="https://cometkartsales.com/">Comet Kart Sales</a></li>
+<li><a href="http://topkartusa.net/electric/">Top Kart USA Electric</a></li>
+<li><a href="https://coyotekarts.com/">Coyote Karts</a></li>
+<li><a href="https://www.pmckart.com/">PMC Kart</a></li>
+</ul>
+<h3 id="tires-1"><a class="header" href="#tires-1">Tires</a></h3>
+<ul>
+<li><a href="https://cometkartsales.com/Hoosier-R60B-10x4.50-11x7.10-5-Slick-Tire-Set.html">Hoosier R60B - Comet Kart Sales</a></li>
+<li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Tire Removal/Mounting Tool - Comet Kart Sales</a></li>
+<li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Bead Breaking Tool - Comet Kart Sales</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
+<h1 id="electrical-rules"><a class="header" href="#electrical-rules">Electrical Rules</a></h1>
+<ul>
+<li><a href="Electrical/electrical.html#disclaimer">Disclaimer</a></li>
+<li><a href="Electrical/electrical.html#drivetrain">Drivetrain</a></li>
+<li><a href="Electrical/electrical.html#batteries">Batteries</a></li>
+<li><a href="Electrical/electrical.html#general-wiring">General Wiring</a></li>
+<li><a href="Electrical/electrical.html#computers-and-sensors">Computers and Sensors</a></li>
+<li><a href="Electrical/electrical.html#design-documentation">Design Documentation</a></li>
+</ul>
+<h2 id="disclaimer-1"><a class="header" href="#disclaimer-1">Disclaimer</a></h2>
+<p>These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.</p>
+<h2 id="drivetrain"><a class="header" href="#drivetrain">Drivetrain</a></h2>
+<ol>
+<li>The <strong>Drivetrain</strong> of the kart must be entirely electric.</li>
+<li>Teams are allowed to use Brushed and Brushless motors.</li>
+<li>Teams are not limited to the number of motors driving the rear tires.</li>
+<li>Teams are not permitted to use motors to drive the front tires.</li>
+<li>The <strong>Total Drivetrain Output</strong> of the motor(s) driving the rear tires must not exceed 15kW.
+<ol>
+<li>Teams are permitted to use higher output motors as long as it is configured not to exceed the above value.</li>
+<li>Total Drivetrain Output must be measured before motor controllers.</li>
+<li>Teams are encouraged to seek out ways to record their Total Drivetrain Output in a manner that the data can be monitored without external systems.</li>
+</ol>
+</li>
+<li>The <strong>Wiring Harness</strong> for the Drivetrain must include a fuse for the maximum expected current draw for a team's configured Total Drivetrain Output.</li>
+</ol>
+<h2 id="batteries"><a class="header" href="#batteries">Batteries</a></h2>
+<ol>
+<li>Teams are allowed up to two battery systems which are listed below.
+<ul>
+<li><strong>Drivetrain Battery System</strong></li>
+<li><strong>Auxiliary Battery System</strong></li>
+</ul>
+</li>
+<li>Each battery system must have an accessible and clearly labeled Kill Switch.</li>
+<li>Teams are allowed to utilize the following battery chemistries:
+<ul>
+<li>Lithium Polymer (LiPo)</li>
+<li>Lithium Ion Cells (18650, 21700, etc.)</li>
+<li>Lithium Iron Phosphate (LiFePO4)</li>
+<li>Lead-Acid</li>
+</ul>
+</li>
+<li>All batteries must satisfy the following criteria:
+<ol>
+<li>Removeable from the kart without the use of tools.</li>
+<li>Clearly labelled and secured in place.</li>
+<li>Safely constructed.</li>
+<li>Sufficiently cooled.</li>
+<li>Cannot have any exposed connectors or contacts.</li>
+<li>Contains Short Circuit protections to disconnect power in the event of a short circuit.</li>
+</ol>
+</li>
+<li><strong>Drivetrain Battery System</strong> Cannot exceed 100V nominal.</li>
+<li><strong>Auxiliary Battery System</strong> Cannot exceed 50V nominal.</li>
+</ol>
+<h2 id="general-wiring"><a class="header" href="#general-wiring">General Wiring</a></h2>
+<ol>
+<li>All <strong>Wiring Harnesses</strong> must be contained without any wires hanging out.
+<ul>
+<li>Wires are not contained when they are able to easily get caught on something or loosely laying on the kart.</li>
+<li>Wires are contained when they are tied down and/or enclosed in a wire loom that is tied down.</li>
+</ul>
+</li>
+<li>All wires must be rated appropriately for the power being drawn through them.</li>
+<li>There should be no exposed contacts or connectors.</li>
+</ol>
+<h2 id="computers-and-sensors"><a class="header" href="#computers-and-sensors">Computers and Sensors</a></h2>
+<ol>
+<li>There is no regulation on sensors</li>
+<li>There is no regulation on computers</li>
+<li>Computation must be entirely contained to the kart
+<ol>
+<li>Karts are not allowed to send data to an outside computer for computation used while running.</li>
+</ol>
+</li>
+</ol>
+<h2 id="design-documentation"><a class="header" href="#design-documentation">Design Documentation</a></h2>
+<ol>
+<li>Teams are required to provide a design document for the electrical systems.</li>
+<li>Electrical Design Documentation must include at minimum the following:
+<ol>
+<li>A description of every <strong>Wiring Harness</strong>.</li>
+<li>A description of every battery system.</li>
+</ol>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
+<h1 id="race-procedure-rules"><a class="header" href="#race-procedure-rules">Race Procedure Rules</a></h1>
+<ul>
+<li><a href="Race_Procedure/race_procedure.html#disclaimer">Disclaimer</a></li>
+<li><a href="Race_Procedure/race_procedure.html#spirit-of-the-competition">Spirit of the Competition</a></li>
+<li><a href="Race_Procedure/race_procedure.html#race-structure">Race Structure</a></li>
+<li><a href="Race_Procedure/race_procedure.html#race-track-definition">Race Track definition</a></li>
+<li><a href="Race_Procedure/race_procedure.html#obstacle-avoidance-rules">Obstacle avoidance rules</a></li>
+<li><a href="Race_Procedure/race_procedure.html#prior-mapping-allowed-category">Prior-mapping allowed category</a></li>
+<li><a href="Race_Procedure/race_procedure.html#reactive-required-category">Reactive required category</a></li>
+<li><a href="Race_Procedure/race_procedure.html#awards">Awards</a></li>
+</ul>
+<h2 id="disclaimer-2"><a class="header" href="#disclaimer-2">Disclaimer</a></h2>
+<p>These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.</p>
+<h2 id="spirit-of-the-competition"><a class="header" href="#spirit-of-the-competition">Spirit of the Competition</a></h2>
+<p>The goal of the Autonomous Karting Series is to create an accessible and exciting autonomous go kart race. The race presents a realistic scenario in which teams need to build go-karts that will race and compete on a track autonomously. It is encouraged that teams will work to create innovative and performant hardware, electrical, and software solutions.</p>
+<h2 id="race-structure"><a class="header" href="#race-structure">Race Structure</a></h2>
+<ol>
+<li>Two race categories:
+<ol>
+<li>Prior-mapping allowed category</li>
+<li>Reactive required category</li>
+</ol>
+</li>
+<li>Team rankings will be by total time taken to complete the 5 laps.</li>
+<li>Obstacle avoidance will be a part of both categories and will be required.
+<ol>
+<li>The exact time penalty for hitting the obstacle will be decided before the race as decided in a competition briefing.</li>
+</ol>
+</li>
+<li>The team order in which each category will be run will be decided at random.</li>
+</ol>
+<h2 id="race-track-definition"><a class="header" href="#race-track-definition">Race Track definition</a></h2>
+<ol>
+<li>The track is defined by both solid lines and <a href="https://ntsigns.com/reflectors/reflective-pavement-markers-rpms/3m-2-way-raised-pavement-marker/">Reflective Pavement Markers</a>.
+<img src="Race_Procedure/./ReflectivePavementMarker.png" alt="Reflective Pavement Marker Image" />
+<ol>
+<li>Markers placed along track will be spaced a minimum of 10 feet apart.</li>
+</ol>
+</li>
+<li>Track width must be at minimum 15 feet and a maximum of 20 feet.</li>
+<li>The start/finish line will be identified on a per track basis.</li>
+</ol>
+<h2 id="obstacle-avoidance-rules"><a class="header" href="#obstacle-avoidance-rules">Obstacle avoidance rules</a></h2>
+<ol>
+<li>The obstacle is considered a separate entity from the track definition.</li>
+<li>Possible placement locations of the obstacle will be determined in the competition briefing prior to the race.</li>
+<li>The obstacle’s starting side (left or right side) will be the same for all teams and categories.</li>
+<li>Each consecutive lap the obstacle will be swapped to the other side of the track.</li>
+<li>The obstacle’s location will not be able to be pre-mapped.</li>
+<li>The obstacle will be provided by the race organizers at the race track.
+<ul>
+<li>3 cardboard <a href="https://www.homedepot.com/p/The-Home-Depot-27-in-L-x-15-in-W-x-16-in-D-Large-Moving-Box-with-Handles-LBX/316324894">Home Depot Boxes</a> will be painted white and taped together in a pyramid shape with two boxes forming the base and one placed on top, as shown below:
+<img src="Race_Procedure/./Obstacle_Diagram.png" alt="Obstacle Diagram" /></li>
+</ul>
+</li>
+</ol>
+<h2 id="prior-mapping-allowed-category"><a class="header" href="#prior-mapping-allowed-category">Prior-mapping allowed category</a></h2>
+<ol>
+<li>The spirit of this category is that any data on the track definition from any prior runs or outside track data is allowed to be used throughout the race.</li>
+<li>A non-encompassing list of allowed data:
+<ul>
+<li>GPS waypoints</li>
+<li>Track centerline</li>
+</ul>
+</li>
+</ol>
+<h2 id="reactive-required-category"><a class="header" href="#reactive-required-category">Reactive required category</a></h2>
+<ol>
+<li>The spirit of this category is to prevent prior models of the track definition from being used as an input.</li>
+<li>Throughout the race, teams are encouraged to perform mapping during the race.</li>
+<li>No <strong>Pre-Mapping</strong> is allowed to be done prior to starting the race, including:
+<ul>
+<li>Any representation of the track</li>
+<li>GPS waypoints</li>
+<li>Data from a prior to the race start</li>
+</ul>
+</li>
+</ol>
+<h2 id="awards"><a class="header" href="#awards">Awards</a></h2>
+<ol>
+<li>Fastest lap Award
+<ul>
+<li>The fastest lap overall of the competition completed in any category.</li>
+</ul>
+</li>
+<li>Category Awards
+<ol>
+<li>For each category the top 3 teams will receive placement awards.</li>
+<li>Placement will be determined by the fastest <strong>Adjusted Total Time</strong> for each team around the track.</li>
+</ol>
+</li>
+<li>Engineering Excellence Award
+<ul>
+<li>The awarded team will be selected from judges based on design documents and implementation of components on the kart.</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
+<h1 id="safety-rules"><a class="header" href="#safety-rules">Safety Rules</a></h1>
+<ul>
+<li><a href="Safety/safety.html#disclaimer">Disclaimer</a></li>
+<li><a href="Safety/safety.html#required-safety-components">Required Safety Components</a></li>
+<li><a href="Safety/safety.html#remote-control">Remote Control</a></li>
+<li><a href="Safety/safety.html#enforcement">Enforcement</a></li>
+<li><a href="Safety/safety.html#resources">Resources</a>
+<ul>
+<li><a href="Safety/safety.html#bodywork">Bodywork</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="disclaimer-3"><a class="header" href="#disclaimer-3">Disclaimer</a></h2>
+<p>These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.</p>
+<h2 id="required-safety-components"><a class="header" href="#required-safety-components">Required Safety Components</a></h2>
+<ol>
+<li><strong>Remote Estop</strong> that when triggered does the following:
+<ol>
+<li>Apply the brakes bringing the kart to a full stop.</li>
+<li>Disconnect power to the <strong>Drivetrain</strong>.</li>
+</ol>
+</li>
+<li><strong>Physical Estop</strong> that is clearly labelled and cuts all power to the kart.</li>
+<li>Batteries must be abte to be removed from the kart quickly in the incident of a fire.</li>
+<li>Moving Commponents must have covers to prevent risk of injury or damage.
+<ol>
+<li>Chains must have chain covers.</li>
+</ol>
+</li>
+<li>There must be no exposed sharp edges on the kart.</li>
+<li>Front and Rear bumpers are required.
+<ol>
+<li>Bumpers cannot be custom made and must be purchased.</li>
+</ol>
+</li>
+</ol>
+<h2 id="remote-control"><a class="header" href="#remote-control">Remote Control</a></h2>
+<ol>
+<li>Remote Control is needed to drive the kart in and out of the pits.</li>
+<li>Remote Control is needed to drive around other teams that may be on track during practice.
+<ol>
+<li><strong>Autonomous Driving</strong> around teams is not allowed when people are on track.</li>
+</ol>
+</li>
+<li>Controller must always have a <strong>Deadman Switch</strong> in order for the kart to be driving.</li>
+<li>Controller is required to reach at 200 meters line of sight to the kart.</li>
+</ol>
+<h2 id="enforcement"><a class="header" href="#enforcement">Enforcement</a></h2>
+<ol>
+<li>Before a kart is allowed to run on the track it must undergo safety inspections and comply with all rules set forth in this document.</li>
+<li>Inspections may consist of the following:
+<ol>
+<li>Visual inspections.</li>
+<li>Physical inspections.</li>
+<li>Document inspections.</li>
+</ol>
+</li>
+</ol>
+<h2 id="resources-1"><a class="header" href="#resources-1">Resources</a></h2>
+<p><strong>The following resources are not affiliated with Autonomous Karting Series Inc. but are included to aid teams in finding and sourcing components.</strong></p>
+<h3 id="bodywork"><a class="header" href="#bodywork">Bodywork</a></h3>
+<ul>
+<li><a href="https://cometkartsales.com/Front-Nose/">Front Noses - Comet Kart</a></li>
+<li><a href="https://cometkartsales.com/Rear-Plastic-Bumpers/">Rear Bumpers - Comet Kart</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="appendix"><a class="header" href="#appendix">Appendix</a></h1>
+<h2 id="definable-terms"><a class="header" href="#definable-terms">Definable Terms</a></h2>
+<ul>
+<li>BOM - Bill of Materials</li>
+<li>Internally Mounted Components - a component or collection of components enclosed completely inside something mounted directly to the chassis.</li>
+<li>Brittle Materials - materials that are prone to shattering and/or creating stiff sharp edges upon breaking.</li>
+<li>Drivetrain - the motor(s) and motor controller(s) that drive the kart.</li>
+<li>Total Drivetrain Output - the total power output in kilowatts of all motors on the drivetrain.</li>
+<li>Wiring Harness - a collection of wires and connectors for a specific component or grouping of components.</li>
+<li>Remote E-stop - a remotely controlled emergency stop system that can be triggered if the kart becomes unstable.</li>
+<li>Physical E-stop - a physical button or switch that can be activated if the kart becomes unstable.</li>
+<li>Autonomous Driving - when the kart is being controlled only by the pre-programmed logic contained on the kart.</li>
+<li>RC Driving - when the kart is being controlled by a remote controller exterior to the kart.</li>
+<li>Deadman Switch - a switch on the remote controller that has a default value of off and must be held in the on state for the kart or controller to function.</li>
+<li>Pre-Mapping - utilizing data collected prior to a race start with the intent to use it to compete in the race.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

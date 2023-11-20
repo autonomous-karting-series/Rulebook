@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Mechanical - Autonomous Karting Series Rulebook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded "><a href="../Administrative/administrative.html"><strong aria-hidden="true">1.</strong> Administrative</a></li><li class="chapter-item expanded "><a href="../Mechanical/mechanical.html" class="active"><strong aria-hidden="true">2.</strong> Mechanical</a></li><li class="chapter-item expanded "><a href="../Electrical/electrical.html"><strong aria-hidden="true">3.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="../Race_Procedure/race_procedure.html"><strong aria-hidden="true">4.</strong> Race Procedure</a></li><li class="chapter-item expanded "><a href="../Safety/safety.html"><strong aria-hidden="true">5.</strong> Safety</a></li><li class="chapter-item expanded "><a href="../Software/software.html"><strong aria-hidden="true">6.</strong> Software</a></li><li class="chapter-item expanded "><a href="../Appendix/appendix.html"><strong aria-hidden="true">7.</strong> Appendix</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Autonomous Karting Series Rulebook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- omit in toc -->
+<h1 id="mechanical-rules"><a class="header" href="#mechanical-rules">Mechanical Rules</a></h1>
+<ul>
+<li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#frame--chassis">Frame / Chassis</a></li>
+<li><a href="#tires">Tires</a></li>
+<li><a href="#brakes">Brakes</a></li>
+<li><a href="#weight">Weight</a></li>
+<li><a href="#mounting">Mounting</a></li>
+<li><a href="#materials">Materials</a></li>
+<li><a href="#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
+<li><a href="#resources">Resources</a>
+<ul>
+<li><a href="#go-kart-suppliers">Go Kart Suppliers</a></li>
+<li><a href="#tires-1">Tires</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
+<p>These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.</p>
+<h2 id="frame--chassis"><a class="header" href="#frame--chassis">Frame / Chassis</a></h2>
+<ol>
+<li>Any Commercial Full Size &quot;Sprint Kart&quot; chassis may be used</li>
+<li>Custom Built Kart chassis may be built provided they utilize standard Off-the-Shelf Components.
+<ol>
+<li>Off-the-Shelf Components can be defined as a part that is purchased from a Go-Kart parts provider.</li>
+<li>Examples of Off-the-Shelf components may contain but are not limited to:</li>
+</ol>
+<ul>
+<li>Tie Rods</li>
+<li>Brake Calipers</li>
+<li>Wheel Hubs</li>
+</ul>
+<ol start="3">
+<li>Any custom fabricated parts must have accompanying CAD models as well as relevant stress calculations.</li>
+<li>Custom Chassis wheelbase must be representative to the wheelbase of Commercial Chassis. <strong><em>If there is concern please contact the competition organizer.</em></strong></li>
+</ol>
+</li>
+<li>All Chassis components must be documented on a BOM declaring the part number and supplier.
+<ol>
+<li>For Custom Chassis the BOM must be broken down by fabricated parts.</li>
+</ol>
+</li>
+<li>All Chassis must include mounting points for Front and Rear bumpers.</li>
+</ol>
+<h2 id="tires"><a class="header" href="#tires">Tires</a></h2>
+<ol>
+<li>All teams must use the following tire sizes:
+<ul>
+<li>Front Tires - 10 x 4.50-5</li>
+<li>Rear Tires - 11 x 7.10-5</li>
+</ul>
+</li>
+<li>All teams must use the following compounds of slick tires:
+<ul>
+<li>Hoosier R60B</li>
+<li><em>Alternative brands and compounds must be requested for evaluation and if approved this section of the rules will be amended.</em></li>
+</ul>
+</li>
+<li>All teams must have the Wheel or Wheel Hub mounted to the chassis with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>.</li>
+<li>If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a <strong>Locking Nut</strong>. Safety Wires are not required.</li>
+</ol>
+<h2 id="brakes"><a class="header" href="#brakes">Brakes</a></h2>
+<ol>
+<li>All teams must at minimum have brakes on both rear tires.
+<ul>
+<li>A rear axle with 1 brake assembly attached will count for both rear tires.</li>
+</ul>
+</li>
+<li>Teams are encouraged to have brakes on all 4 wheels of the kart.</li>
+<li>Teams must be able to lock the brakes on any wheel with a brake attached.
+<ul>
+<li>This will be enforced by having the kart accelerate over a given distance and then the team must brake as much as needed to lock the brakes.</li>
+<li><em>At this time there is no maximum stopping distance.</em></li>
+</ul>
+</li>
+<li>All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.</li>
+</ol>
+<h2 id="weight"><a class="header" href="#weight">Weight</a></h2>
+<ol>
+<li>There is no maximum weight.</li>
+<li>There is a minimum weight of 250 pounds with all components attached to the kart.</li>
+</ol>
+<h2 id="mounting"><a class="header" href="#mounting">Mounting</a></h2>
+<ol>
+<li>Any component mounted directly to the chassis not mentioned already must be secured with a threadlocker.
+<ol>
+<li>Components that are needed to be removed and remounted frequently may be secured with a <strong>Locking Nut</strong>.</li>
+<li>Electrical wires may be secured with cable ties or similar items.</li>
+</ol>
+</li>
+<li><strong>Internally Mounted Components</strong> must be securely mounted such that the components do not become detached or loose inside their container.</li>
+<li>The above mounting rules are enforcable through visual inspection with physical inspections if there is concern.</li>
+</ol>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
+<ol>
+<li>Any non-Internally Mounted Component must not be subject to the following:
+<ul>
+<li>Acrylic</li>
+<li>Any <strong>Brittle Material</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="bom-bill-of-materials"><a class="header" href="#bom-bill-of-materials">BOM (Bill of Materials)</a></h2>
+<ol>
+<li>Teams must provide a Bill of Materials for all mechanical components <strong>NOT</strong> mounted internally.
+<ol>
+<li>Each mechanical component must be represented by an individual section in the BOM.</li>
+</ol>
+</li>
+<li>A Team's Mechanical BOM cost shall not exceed $10,000 USD.
+<ul>
+<li>A team is able to estimate the cost of a component if it is unsure of the total value of the component. <em>This must be stated if the cost is estimated</em>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<p><strong>The following resources are not affiliated with Autonomous Karting Series Inc. but are included to aid teams in finding and sourcing components.</strong></p>
+<h3 id="go-kart-suppliers"><a class="header" href="#go-kart-suppliers">Go Kart Suppliers</a></h3>
+<ul>
+<li><a href="https://cometkartsales.com/">Comet Kart Sales</a></li>
+<li><a href="http://topkartusa.net/electric/">Top Kart USA Electric</a></li>
+<li><a href="https://coyotekarts.com/">Coyote Karts</a></li>
+<li><a href="https://www.pmckart.com/">PMC Kart</a></li>
+</ul>
+<h3 id="tires-1"><a class="header" href="#tires-1">Tires</a></h3>
+<ul>
+<li><a href="https://cometkartsales.com/Hoosier-R60B-10x4.50-11x7.10-5-Slick-Tire-Set.html">Hoosier R60B - Comet Kart Sales</a></li>
+<li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Tire Removal/Mounting Tool - Comet Kart Sales</a></li>
+<li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Bead Breaking Tool - Comet Kart Sales</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Administrative/administrative.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Electrical/electrical.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Administrative/administrative.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Electrical/electrical.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
