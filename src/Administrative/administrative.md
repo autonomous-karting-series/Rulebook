@@ -1,9 +1,5 @@
 # Administrative
 
-## What is the competition
-
-The Autonomous Karting Series is a collegiate competition series in which teams design, build, and race autonomous electric go-karts.
-
 ## Who is allowed to compete
  1. Teams are required to be affiliated with an Academic Institution.
  2. A team can consist of members from more than one University, however any one person cannot be on multiple teams.
