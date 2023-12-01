@@ -1,7 +1,6 @@
 <!-- omit in toc -->
 # Race Procedure Rules
 
-- [Disclaimer](#disclaimer)
 - [Spirit of the Competition](#spirit-of-the-competition)
 - [Race Structure](#race-structure)
 - [Race Track definition](#race-track-definition)
@@ -9,10 +8,6 @@
 - [Prior-mapping allowed category](#prior-mapping-allowed-category)
 - [Reactive required category](#reactive-required-category)
 - [Awards](#awards)
-
-## Disclaimer
-
-These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.
 
 ## Spirit of the Competition
 

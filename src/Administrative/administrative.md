@@ -20,3 +20,8 @@
 
 ## Jurisdiction of rules
  1. All announcements and comments posted on the official website of the competition are to be considered part of the official ruleset
+
+## Disclaimer
+
+These rules are open to interpretation where specifics are not given. This means that, for example, a material that is stated to be banned in one section is banned in all sections except where explicitly allowed. Other sections may have exceptions that explicitly allow or disallow under specific circumstances for those sections.
+

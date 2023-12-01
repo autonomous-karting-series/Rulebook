@@ -1,16 +1,11 @@
 <!-- omit in toc -->
 # Electrical Rules
 
-- [Disclaimer](#disclaimer)
 - [Drivetrain](#drivetrain)
 - [Batteries](#batteries)
 - [General Wiring](#general-wiring)
 - [Computers and Sensors](#computers-and-sensors)
 - [Design Documentation](#design-documentation)
-
-## Disclaimer
-
-These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.
 
 ## Drivetrain
 

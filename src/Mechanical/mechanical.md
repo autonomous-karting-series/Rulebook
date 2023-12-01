@@ -2,7 +2,6 @@
 # Mechanical Rules
 
 
-- [Disclaimer](#disclaimer)
 - [Frame / Chassis](#frame--chassis)
 - [Tires](#tires)
 - [Brakes](#brakes)
@@ -13,10 +12,6 @@
 - [Resources](#resources)
   - [Go Kart Suppliers](#go-kart-suppliers)
   - [Tires](#tires-1)
-
-## Disclaimer
-
-These rules are open to interpretation where specifics are not given. This means that, for example, a material is not explicitly stated then that material is not banned as long as it does not break another rule in this section. Other sections may have specificities for those areas.
 
 ## Frame / Chassis
 
