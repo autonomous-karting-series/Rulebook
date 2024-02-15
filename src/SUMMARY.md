@@ -3,6 +3,8 @@
 [Introduction](Introduction.md)
 [Overview](Overview.md)
 
+- [Changes](Changes/changes.md)
+
 - [Administrative](Administrative/administrative.md)
 - [Mechanical](Mechanical/mechanical.md)
 - [Electrical](Electrical/electrical.md)
