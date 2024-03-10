@@ -11,7 +11,9 @@ This section covers changes that take place during Team Leads meetings with AKS 
  1. Quick battery removal is no longer a requirement. Instead batteries must be mounted and secured with the intent to reduce risk of puncture, overheating, and overcurrent to reduce risk of incidents.
     * A remote disconnect or emergency button will be required to cut any electrical connections to the battery in the case of an incident.
  2. Alternative tires are allowed as long as they are comparable in hardness (durometer) to Hoosier R60B compound.
-    * Vega White tires are allowed.
+    * Vega tires are allowed.
+      * Vega 5" XH3 Green (Hard compound) - https://www.vegausa.com/Tires/XH3.htm
+      * Vega 5" XM3 White (Medium compound) - https://www.vegausa.com/Tires/XM3.htm
     * Tire sizes must remain exactly as are in the rules.
 
 ## January 31, 2024
