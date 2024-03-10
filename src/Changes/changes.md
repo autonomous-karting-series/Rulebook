@@ -39,3 +39,10 @@ This section covers changes that take place during Team Leads meetings with AKS 
       * Minimum of 1 switch, (multiple are allowed for different power systems, ie. 1 for main power and 1 for pc power)
       * Can be remote controlled --not required
     * Team must explain all kill-switches in inspection
+
+## February 28, 2024
+
+### Mechanical
+
+ 1. Minimum weight requirements have been removed.
+    * Please note that there is a point at which too light of a go-kart will make controlling the kart more difficult. If your team is struggling with tires lifting off the ground or sliding then look into attaching lead weights to the desired areas to disburse weight better.
