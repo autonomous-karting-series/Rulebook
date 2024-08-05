@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](Introduction.md)
+[Rulebook](Rulebook.md)
 [Overview](Overview.md)
 
 - [Changes](Changes/changes.md)
