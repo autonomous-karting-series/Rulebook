@@ -1,4 +1,12 @@
+<!-- omit in toc -->
 # Administrative
+
+- [Who Is Allowed To Compete](#who-is-allowed-to-compete)
+- [Required Roles](#required-roles)
+- [Documentation Requirements From Teams](#documentation-requirements-from-teams)
+- [Jurisdiction Of Rules](#jurisdiction-of-rules)
+- [Disclaimer](#disclaimer)
+
 
 ## Who Is Allowed To Compete
  1. Teams are required to be affiliated with an Academic Institution.
