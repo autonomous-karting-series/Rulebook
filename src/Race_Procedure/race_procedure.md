@@ -25,11 +25,9 @@ The goal of the Autonomous Karting Series is to create an accessible and excitin
 
 ## Race Track definition
 
- 1. The track is defined by both solid lines and [Reflective Pavement Markers](https://ntsigns.com/reflectors/reflective-pavement-markers-rpms/3m-2-way-raised-pavement-marker/).
-    ![Reflective Pavement Marker Image](./ReflectivePavementMarker.png)
-    1. Markers will be yelow with yelow reflectors.
-    2. Markers placed along track will be spaced a minimum of 10 feet apart.
- 2. Track width must be at minimum 15 feet and a maximum of 20 feet.
+ 1. The track is defined by the paved surface of the track
+    * Individual races may have extra features to define the track.
+ 2. Track width must be at minimum 15 feet.
  3. The start/finish line will be identified on a per track basis.
 
 ## Obstacle avoidance rules

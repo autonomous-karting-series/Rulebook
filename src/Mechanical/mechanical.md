@@ -23,29 +23,32 @@
 
 ## Tires
 
- 1. All teams must use the following tire sizes:
+ 1. Go-Karts must use the following tire sizes:
     * Front Tires - 10 x 4.50-5
     * Rear Tires - 11 x 7.10-5
- 2. All teams must use the following compounds of slick tires:
+ 2. Go-Karts must use the following compounds of slick tires:
     * Hoosier R60B
-    * _Alternative brands and compounds must be requested for evaluation and if approved this section of the rules will be amended._
- 3. All teams must have the Wheel or Wheel Hub mounted to the chassis with a __Castle Nut and Cotter Pin__ or with a __Locking Nut and Safety Wire__.
+    * Vega XH3 Green (Hard Compound)
+    * Vega XM3 White (Medium Compound)
+    * _Other tires may be allowed as long as they are of similar durometer to the above compounds. Please contact competition organizers for clarification on allowable tire compounds._
+ 3. Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a __Castle Nut and Cotter Pin__ or with a __Locking Nut and Safety Wire__.
  4. If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a __Locking Nut__. Safety Wires are not required.
 
 ## Brakes
 
- 1. All teams must at minimum have brakes on both rear tires.
+ 1. Go-Karts must at minimum have brakes on both rear tires.
     * A rear axle with 1 brake assembly attached will count for both rear tires.
  2. Teams are encouraged to have brakes on all 4 wheels of the kart.
- 3. Teams must be able to lock the brakes on any wheel with a brake attached.
-    * This will be enforced by having the kart accelerate over a given distance and then the team must brake as much as needed to lock the brakes.
-    * _At this time there is no maximum stopping distance._
- 4. All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.
+ 3. All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.
 
 ## Weight
 
  1. There is no maximum weight.
- 2. There is a minimum weight of 250 pounds with all components attached to the kart.
+ 2. There is a minimum weight of 300 pounds with all components attached to the kart.
+    * It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below.
+      * Front to Back -> 43% to 57%
+      * Left to Right -> 50% to 50%
+      * For further information please see this [article](https://www.woodbridgekartclub.com/how-to/kart-scaling-weight-distribution/) _not affiliated_.
 
 ## Mounting
 
@@ -74,13 +77,16 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
 
 ### Go Kart Suppliers
 
+ * [Come Get Shockt - Preferred Distributor for North America](https://comegetshockt.com/)
  * [Comet Kart Sales](https://cometkartsales.com/)
- * [Top Kart USA Electric](http://topkartusa.net/electric/)
  * [Coyote Karts](https://coyotekarts.com/)
  * [PMC Kart](https://www.pmckart.com/)
+ * [Top Kart USA Electric](http://topkartusa.net/electric/)
 
 ### Tires
 
  * [Hoosier R60B - Comet Kart Sales](https://cometkartsales.com/Hoosier-R60B-10x4.50-11x7.10-5-Slick-Tire-Set.html)
+ * [Vega XH3 Green (Hard Compound)](https://www.vegausa.com/Tires/XH3.htm)
+ * [Vega XM3 White (Medium Compound)](https://www.vegausa.com/Tires/XM3.htm)
  * [Tire Removal/Mounting Tool - Comet Kart Sales](https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html)
  * [Bead Breaking Tool - Comet Kart Sales](https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html)
