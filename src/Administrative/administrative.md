@@ -1,24 +1,28 @@
 # Administrative
 
-## Who is allowed to compete
+## Who Is Allowed To Compete
  1. Teams are required to be affiliated with an Academic Institution.
- 2. A team can consist of members from more than one University, however any one person cannot be on multiple teams.
+    * If the Academic Institution does not allow public affiliations then this is waived as long as the team members are comprised of students from aformentioned Academic Institution.
+ 2. A team can consist of members from more than one Academic Institution, however any one person cannot be on multiple teams.
+ 3. One Academic Institution can host multiple teams.
+ 4. Organizations are allowed to sponsor and/or mentor a team but are not allowed to via mentors contribute significantly to the go-kart of a team.
+    * Judgment of "significant contribution" is at the discretion of the competition organizers.
 
 ## Required Roles
  1. All teams must establish at least one member as their Autonomous Safety Officer.
     * The Autonomous Safety Office will ensure that their team’s kart is operating in a safe manner on and off track.
- 2. All teams must establish at least one Designated Driver.
+ 2. All teams must establish at least one Designated "Driver".
     * A Designated Driver is a separate person from a team’s Autonomous Safety Officer.
-    * A Designated Driver is responsible for driving the team’s kart as either a driver within the kart or when the kart is being operated remotely.
+    * A Designated Driver is responsible for controlling the team’s kart as the kart is being operated remotely.
 
-## Documentation Requirements from teams
+## Documentation Requirements From Teams
  1. All participants must sign and submit a liability waiver.
-    1. All teams must submit the required videos and design documentation before specified race deadlines.
- 2. Some events may require certain components and features to be demonstrated in person.
+ 2. All teams must submit the required videos and design documentation before specified race deadlines.
+ 3. Some events may require certain components and features to be demonstrated in person.
     1. Teams must be able to demonstrate all components and features in person if requested.
     2. Teams will be notified of specific demonstrations before the event.
 
-## Jurisdiction of rules
+## Jurisdiction Of Rules
  1. All announcements and comments posted on the official website of the competition are to be considered part of the official ruleset
 
 ## Disclaimer
