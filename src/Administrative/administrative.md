@@ -1,3 +1,4 @@
+<!-- omit in toc -->
 # Administrative
 
 ## Who is allowed to compete
