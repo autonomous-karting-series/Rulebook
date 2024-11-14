@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light" dir="ltr">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -32,15 +32,17 @@
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -62,19 +64,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -84,45 +83,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Rulebook.html">Rulebook</a></li><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded "><a href="../Changes/changes.html"><strong aria-hidden="true">1.</strong> Changes</a></li><li class="chapter-item expanded "><a href="../Administrative/administrative.html" class="active"><strong aria-hidden="true">2.</strong> Administrative</a></li><li class="chapter-item expanded "><a href="../Mechanical/mechanical.html"><strong aria-hidden="true">3.</strong> Mechanical</a></li><li class="chapter-item expanded "><a href="../Electrical/electrical.html"><strong aria-hidden="true">4.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="../Race_Procedure/race_procedure.html"><strong aria-hidden="true">5.</strong> Race Procedure</a></li><li class="chapter-item expanded "><a href="../Safety/safety.html"><strong aria-hidden="true">6.</strong> Safety</a></li><li class="chapter-item expanded "><a href="../Software/software.html"><strong aria-hidden="true">7.</strong> Software</a></li><li class="chapter-item expanded "><a href="../Appendix/appendix.html"><strong aria-hidden="true">8.</strong> Appendix</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -177,10 +156,27 @@
                     <main>
                         <!-- omit in toc -->
 <h1 id="administrative"><a class="header" href="#administrative">Administrative</a></h1>
-<h2 id="who-is-allowed-to-compete"><a class="header" href="#who-is-allowed-to-compete">Who is allowed to compete</a></h2>
+<ul>
+<li><a href="#who-is-allowed-to-compete">Who Is Allowed To Compete</a></li>
+<li><a href="#required-roles">Required Roles</a></li>
+<li><a href="#documentation-requirements-from-teams">Documentation Requirements From Teams</a></li>
+<li><a href="#jurisdiction-of-rules">Jurisdiction Of Rules</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+</ul>
+<h2 id="who-is-allowed-to-compete"><a class="header" href="#who-is-allowed-to-compete">Who Is Allowed To Compete</a></h2>
 <ol>
-<li>Teams are required to be affiliated with an Academic Institution.</li>
-<li>A team can consist of members from more than one University, however any one person cannot be on multiple teams.</li>
+<li>Teams are required to be affiliated with an Academic Institution.
+<ul>
+<li>If the Academic Institution does not allow public affiliations then this is waived as long as the team members are comprised of students from aformentioned Academic Institution.</li>
+</ul>
+</li>
+<li>A team can consist of members from more than one Academic Institution, however any one person cannot be on multiple teams.</li>
+<li>One Academic Institution can host multiple teams.</li>
+<li>Organizations are allowed to sponsor and/or mentor a team but are not allowed to via mentors contribute significantly to the go-kart of a team.
+<ul>
+<li>Judgment of "significant contribution" is at the discretion of the competition organizers.</li>
+</ul>
+</li>
 </ol>
 <h2 id="required-roles"><a class="header" href="#required-roles">Required Roles</a></h2>
 <ol>
@@ -189,20 +185,17 @@
 <li>The Autonomous Safety Office will ensure that their team’s kart is operating in a safe manner on and off track.</li>
 </ul>
 </li>
-<li>All teams must establish at least one Designated Driver.
+<li>All teams must establish at least one Designated "Driver".
 <ul>
 <li>A Designated Driver is a separate person from a team’s Autonomous Safety Officer.</li>
-<li>A Designated Driver is responsible for driving the team’s kart as either a driver within the kart or when the kart is being operated remotely.</li>
+<li>A Designated Driver is responsible for controlling the team’s kart as the kart is being operated remotely.</li>
 </ul>
 </li>
 </ol>
-<h2 id="documentation-requirements-from-teams"><a class="header" href="#documentation-requirements-from-teams">Documentation Requirements from teams</a></h2>
+<h2 id="documentation-requirements-from-teams"><a class="header" href="#documentation-requirements-from-teams">Documentation Requirements From Teams</a></h2>
 <ol>
-<li>All participants must sign and submit a liability waiver.
-<ol>
+<li>All participants must sign and submit a liability waiver.</li>
 <li>All teams must submit the required videos and design documentation before specified race deadlines.</li>
-</ol>
-</li>
 <li>Some events may require certain components and features to be demonstrated in person.
 <ol>
 <li>Teams must be able to demonstrate all components and features in person if requested.</li>
@@ -210,7 +203,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="jurisdiction-of-rules"><a class="header" href="#jurisdiction-of-rules">Jurisdiction of rules</a></h2>
+<h2 id="jurisdiction-of-rules"><a class="header" href="#jurisdiction-of-rules">Jurisdiction Of Rules</a></h2>
 <ol>
 <li>All announcements and comments posted on the official website of the competition are to be considered part of the official ruleset</li>
 </ol>

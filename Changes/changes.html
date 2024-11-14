@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light" dir="ltr">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -32,15 +32,17 @@
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -62,19 +64,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -84,45 +83,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Rulebook.html">Rulebook</a></li><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded "><a href="../Changes/changes.html" class="active"><strong aria-hidden="true">1.</strong> Changes</a></li><li class="chapter-item expanded "><a href="../Administrative/administrative.html"><strong aria-hidden="true">2.</strong> Administrative</a></li><li class="chapter-item expanded "><a href="../Mechanical/mechanical.html"><strong aria-hidden="true">3.</strong> Mechanical</a></li><li class="chapter-item expanded "><a href="../Electrical/electrical.html"><strong aria-hidden="true">4.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="../Race_Procedure/race_procedure.html"><strong aria-hidden="true">5.</strong> Race Procedure</a></li><li class="chapter-item expanded "><a href="../Safety/safety.html"><strong aria-hidden="true">6.</strong> Safety</a></li><li class="chapter-item expanded "><a href="../Software/software.html"><strong aria-hidden="true">7.</strong> Software</a></li><li class="chapter-item expanded "><a href="../Appendix/appendix.html"><strong aria-hidden="true">8.</strong> Appendix</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -178,76 +157,7 @@
                         <h1 id="changes"><a class="header" href="#changes">Changes</a></h1>
 <h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
 <p>This section covers changes that take place during Team Leads meetings with AKS and are not yet in the official rulebook but overwrite existing rules or add clarification to them.</p>
-<h2 id="january-17-2024"><a class="header" href="#january-17-2024">January 17, 2024</a></h2>
-<h3 id="electrical"><a class="header" href="#electrical">Electrical</a></h3>
-<ol>
-<li>Quick battery removal is no longer a requirement. Instead batteries must be mounted and secured with the intent to reduce risk of puncture, overheating, and overcurrent to reduce risk of incidents.
-<ul>
-<li>A remote disconnect or emergency button will be required to cut any electrical connections to the battery in the case of an incident.</li>
-</ul>
-</li>
-<li>Alternative tires are allowed as long as they are comparable in hardness (durometer) to Hoosier R60B compound.
-<ul>
-<li>Vega tires are allowed.
-<ul>
-<li>Vega 5" XH3 Green (Hard compound) - https://www.vegausa.com/Tires/XH3.htm</li>
-<li>Vega 5" XM3 White (Medium compound) - https://www.vegausa.com/Tires/XM3.htm</li>
-</ul>
-</li>
-<li>Tire sizes must remain exactly as are in the rules.</li>
-</ul>
-</li>
-</ol>
-<h2 id="january-31-2024"><a class="header" href="#january-31-2024">January 31, 2024</a></h2>
-<h3 id="administrative"><a class="header" href="#administrative">Administrative</a></h3>
-<ol>
-<li>No persons in go-kart while the go-kart is turned on.
-<ul>
-<li>A person can be in the go-kart as long as the go-kart is turned off completely.</li>
-</ul>
-</li>
-<li>Safety Officer helps to inspect other teams and support other teams pass inspections.</li>
-</ol>
-<h3 id="safety"><a class="header" href="#safety">Safety</a></h3>
-<ol>
-<li>Urgent Braking
-<ul>
-<li>All teams must prove that they have a deadman/urgent braking switch that has the go-kart come to a safe stop.
-<ul>
-<li>Deadman switch must trigger if a controller leaves range or disconnects</li>
-</ul>
-</li>
-<li>The urgent stop must be commandable through software and via a physical switch</li>
-<li>3 Points of stopping:
-<ul>
-<li>Automatic stopping on command (physical or software)</li>
-<li>Can be satisfied by switching to RC control to stop</li>
-<li>Emergency Stop final measure if nothing else works</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Emergency Disconnect
-<ul>
-<li>Physical switch must exist on go-kart to disconnect ALL power on the go-kart
-<ul>
-<li>Minimum of 1 switch, (multiple are allowed for different power systems, ie. 1 for main power and 1 for pc power)</li>
-<li>Can be remote controlled --not required</li>
-</ul>
-</li>
-<li>Team must explain all kill-switches in inspection</li>
-</ul>
-</li>
-</ol>
-<h2 id="february-28-2024"><a class="header" href="#february-28-2024">February 28, 2024</a></h2>
-<h3 id="mechanical"><a class="header" href="#mechanical">Mechanical</a></h3>
-<ol>
-<li>Minimum weight requirements have been removed.
-<ul>
-<li>Please note that there is a point at which too light of a go-kart will make controlling the kart more difficult. If your team is struggling with tires lifting off the ground or sliding then look into attaching lead weights to the desired areas to disburse weight better.</li>
-</ul>
-</li>
-</ol>
+<h3 id="there-are-not-currently-any-unofficial-changes-to-the-rules"><a class="header" href="#there-are-not-currently-any-unofficial-changes-to-the-rules">THERE ARE NOT CURRENTLY ANY UNOFFICIAL CHANGES TO THE RULES</a></h3>
 
                     </main>
 

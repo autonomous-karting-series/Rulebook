@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light" dir="ltr">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -32,15 +32,17 @@
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -62,19 +64,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -84,45 +83,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Rulebook.html">Rulebook</a></li><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded "><a href="../Changes/changes.html"><strong aria-hidden="true">1.</strong> Changes</a></li><li class="chapter-item expanded "><a href="../Administrative/administrative.html"><strong aria-hidden="true">2.</strong> Administrative</a></li><li class="chapter-item expanded "><a href="../Mechanical/mechanical.html" class="active"><strong aria-hidden="true">3.</strong> Mechanical</a></li><li class="chapter-item expanded "><a href="../Electrical/electrical.html"><strong aria-hidden="true">4.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="../Race_Procedure/race_procedure.html"><strong aria-hidden="true">5.</strong> Race Procedure</a></li><li class="chapter-item expanded "><a href="../Safety/safety.html"><strong aria-hidden="true">6.</strong> Safety</a></li><li class="chapter-item expanded "><a href="../Software/software.html"><strong aria-hidden="true">7.</strong> Software</a></li><li class="chapter-item expanded "><a href="../Appendix/appendix.html"><strong aria-hidden="true">8.</strong> Appendix</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -208,41 +187,47 @@
 </ol>
 <h2 id="tires"><a class="header" href="#tires">Tires</a></h2>
 <ol>
-<li>All teams must use the following tire sizes:
+<li>Go-Karts must use the following tire sizes:
 <ul>
 <li>Front Tires - 10 x 4.50-5</li>
 <li>Rear Tires - 11 x 7.10-5</li>
 </ul>
 </li>
-<li>All teams must use the following compounds of slick tires:
+<li>Go-Karts must use the following compounds of slick tires:
 <ul>
 <li>Hoosier R60B</li>
-<li><em>Alternative brands and compounds must be requested for evaluation and if approved this section of the rules will be amended.</em></li>
+<li>Vega XH3 Green (Hard Compound)</li>
+<li>Vega XM3 White (Medium Compound)</li>
+<li><em>Other tires may be allowed as long as they are of similar durometer to the above compounds. Please contact competition organizers for clarification on allowable tire compounds.</em></li>
 </ul>
 </li>
-<li>All teams must have the Wheel or Wheel Hub mounted to the chassis with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>.</li>
+<li>Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>.</li>
 <li>If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a <strong>Locking Nut</strong>. Safety Wires are not required.</li>
 </ol>
 <h2 id="brakes"><a class="header" href="#brakes">Brakes</a></h2>
 <ol>
-<li>All teams must at minimum have brakes on both rear tires.
+<li>Go-Karts must at minimum have brakes on both rear tires.
 <ul>
 <li>A rear axle with 1 brake assembly attached will count for both rear tires.</li>
 </ul>
 </li>
 <li>Teams are encouraged to have brakes on all 4 wheels of the kart.</li>
-<li>Teams must be able to lock the brakes on any wheel with a brake attached.
-<ul>
-<li>This will be enforced by having the kart accelerate over a given distance and then the team must brake as much as needed to lock the brakes.</li>
-<li><em>At this time there is no maximum stopping distance.</em></li>
-</ul>
-</li>
 <li>All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.</li>
 </ol>
 <h2 id="weight"><a class="header" href="#weight">Weight</a></h2>
 <ol>
 <li>There is no maximum weight.</li>
-<li>There is a minimum weight of 250 pounds with all components attached to the kart.</li>
+<li>There is a minimum weight of 350 pounds with all components attached to the kart.
+<ul>
+<li>It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below.
+<ul>
+<li>Front to Back -&gt; 43% to 57%</li>
+<li>Left to Right -&gt; 50% to 50%</li>
+<li>For further information please see this <a href="https://www.woodbridgekartclub.com/how-to/kart-scaling-weight-distribution/">article</a> <em>not affiliated</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 <h2 id="mounting"><a class="header" href="#mounting">Mounting</a></h2>
 <ol>
@@ -271,7 +256,7 @@
 <li>Each mechanical component must be represented by an individual section in the BOM.</li>
 </ol>
 </li>
-<li>A Team's Mechanical BOM cost shall not exceed $10,000 USD.
+<li>A Team's Mechanical BOM cost shall not exceed $15,000 USD.
 <ul>
 <li>A team is able to estimate the cost of a component if it is unsure of the total value of the component. <em>This must be stated if the cost is estimated</em>.</li>
 </ul>
@@ -281,14 +266,17 @@
 <p><strong>The following resources are not affiliated with Autonomous Karting Series Inc. but are included to aid teams in finding and sourcing components.</strong></p>
 <h3 id="go-kart-suppliers"><a class="header" href="#go-kart-suppliers">Go Kart Suppliers</a></h3>
 <ul>
+<li><a href="https://comegetshockt.com/">Come Get Shockt - Preferred Distributor for North America</a></li>
 <li><a href="https://cometkartsales.com/">Comet Kart Sales</a></li>
-<li><a href="http://topkartusa.net/electric/">Top Kart USA Electric</a></li>
 <li><a href="https://coyotekarts.com/">Coyote Karts</a></li>
 <li><a href="https://www.pmckart.com/">PMC Kart</a></li>
+<li><a href="http://topkartusa.net/electric/">Top Kart USA Electric</a></li>
 </ul>
 <h3 id="tires-1"><a class="header" href="#tires-1">Tires</a></h3>
 <ul>
 <li><a href="https://cometkartsales.com/Hoosier-R60B-10x4.50-11x7.10-5-Slick-Tire-Set.html">Hoosier R60B - Comet Kart Sales</a></li>
+<li><a href="https://www.vegausa.com/Tires/XH3.htm">Vega XH3 Green (Hard Compound)</a></li>
+<li><a href="https://www.vegausa.com/Tires/XM3.htm">Vega XM3 White (Medium Compound)</a></li>
 <li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Tire Removal/Mounting Tool - Comet Kart Sales</a></li>
 <li><a href="https://cometkartsales.com/Economy-Tire-Pryr-Tire-Removal-and-Mounting-Tool.html">Bead Breaking Tool - Comet Kart Sales</a></li>
 </ul>
