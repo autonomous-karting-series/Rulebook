@@ -44,7 +44,7 @@
 ## Weight
 
  1. There is no maximum weight.
- 2. There is a minimum weight of 300 pounds with all components attached to the kart.
+ 2. There is a minimum weight of 350 pounds with all components attached to the kart.
     * It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below.
       * Front to Back -> 43% to 57%
       * Left to Right -> 50% to 50%
@@ -68,7 +68,7 @@
 
  1. Teams must provide a Bill of Materials for all mechanical components __NOT__ mounted internally.
     1. Each mechanical component must be represented by an individual section in the BOM.
- 2. A Team's Mechanical BOM cost shall not exceed $10,000 USD.
+ 2. A Team's Mechanical BOM cost shall not exceed $15,000 USD.
     * A team is able to estimate the cost of a component if it is unsure of the total value of the component. _This must be stated if the cost is estimated_.
 
 ## Resources
