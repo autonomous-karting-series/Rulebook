@@ -31,12 +31,11 @@
     * Lithium Iron Phosphate (LiFePO4)
     * Lead-Acid
  4. All batteries must satisfy the following criteria:
-    1. Removeable from the kart without the use of tools.
-    2. Clearly labelled and secured in place.
-    3. Safely constructed.
-    4. Sufficiently cooled.
-    5. Cannot have any exposed connectors or contacts.
-    6. Contains Short Circuit protections to disconnect power in the event of a short circuit.
+    1. Clearly labelled and secured in place.
+    2. Safely constructed.
+    3. Sufficiently cooled.
+    4. Cannot have any exposed connectors or contacts.
+    5. Contains Short Circuit protections to disconnect power in the event of a short circuit.
  5. __Drivetrain Battery System__ Cannot exceed 100V nominal.
  6. __Auxiliary Battery System__ Cannot exceed 50V nominal.
 
