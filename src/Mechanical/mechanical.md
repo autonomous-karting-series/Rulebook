@@ -18,7 +18,7 @@
  1. Any Commercial Full Size "Sprint Kart" chassis may be used
     * Custom Chassis may not be built from scratch.
     * For new teams, the Blue Shock Race X3 E-Kart is the new suggested platform to build on.
-    * The BSR X3 can be bought in the following configurations from ComeGetShockt:
+    * The BSR X3 can be bought in the following configurations from GetShockt:
       * Full Kit including Power Unit (15KW Motor + Controller) and Battery (96V Li-Ion)
         * With Front Brakes - $12,500 + freight
         * Rear Brakes Only - $13,300 + freight
@@ -85,7 +85,7 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
 
 ### Go Kart Suppliers
 
- * [Come Get Shockt - Preferred Distributor for North America](https://comegetshockt.com/)
+ * [Get Shockt - Preferred Distributor for North America](http://getshockt.com/products/electric-racing-karts/blue-shock-race-racing-e-kart-x3)
  * [Blue Shock Race X3 Racing E-Kart](https://blueshockrace.com/electric-racing-karts/)
  * [Comet Kart Sales](https://cometkartsales.com/)
  * [Coyote Karts](https://coyotekarts.com/)
