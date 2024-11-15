@@ -44,8 +44,8 @@
 ## Weight
 
  1. There is no maximum weight.
- 2. There is a minimum weight of 350 pounds with all components attached to the kart.
-    * It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below.
+ 2. There is a minimum weight of 275 pounds with all components attached to the kart.
+    * It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below they are not a requirement but a suggestion for a starting distribution.
       * Front to Back -> 43% to 57%
       * Left to Right -> 50% to 50%
       * For further information please see this [article](https://www.woodbridgekartclub.com/how-to/kart-scaling-weight-distribution/) _not affiliated_.
