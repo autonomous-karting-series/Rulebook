@@ -17,9 +17,17 @@
 
  1. Any Commercial Full Size "Sprint Kart" chassis may be used
     * Custom Chassis may not be built from scratch.
- 3. All Chassis components must be documented on a BOM declaring the part number and supplier.
+    * For new teams, the Blue Shock Race X3 E-Kart is the new suggested platform to build on.
+    * The BSR X3 can be bought in the following configurations from ComeGetShockt:
+      * Full Kit including Power Unit (15KW Motor + Controller) and Battery (96V Li-Ion)
+        * With Front Brakes - $12,500 + freight
+        * Rear Brakes Only - $13,300 + freight
+      * Chassis Only
+        * With Front Brakes - $5,500 + freight
+        * Rear Brakes Only - $4,700 + freight
+ 2. All Chassis components must be documented on a BOM declaring the part number and supplier.
     1. For Custom Chassis the BOM must be broken down by fabricated parts.
- 4. All Chassis must include mounting points for Front and Rear bumpers.
+ 3. All Chassis must include mounting points for Front and Rear bumpers.
 
 ## Tires
 
@@ -68,7 +76,7 @@
 
  1. Teams must provide a Bill of Materials for all mechanical components __NOT__ mounted internally.
     1. Each mechanical component must be represented by an individual section in the BOM.
- 2. A Team's Mechanical BOM cost shall not exceed $15,000 USD.
+ 2. A Team's Mechanical BOM cost shall not exceed $17,500 USD.
     * A team is able to estimate the cost of a component if it is unsure of the total value of the component. _This must be stated if the cost is estimated_.
 
 ## Resources
@@ -78,6 +86,7 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
 ### Go Kart Suppliers
 
  * [Come Get Shockt - Preferred Distributor for North America](https://comegetshockt.com/)
+ * [Blue Shock Race X3 Racing E-Kart](https://blueshockrace.com/electric-racing-karts/)
  * [Comet Kart Sales](https://cometkartsales.com/)
  * [Coyote Karts](https://coyotekarts.com/)
  * [PMC Kart](https://www.pmckart.com/)
