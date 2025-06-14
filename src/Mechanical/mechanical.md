@@ -85,12 +85,12 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
 
 ### Go Kart Suppliers
 
- * [Get Shockt - Preferred Distributor for North America](http://getshockt.com/products/electric-racing-karts/blue-shock-race-racing-e-kart-x3)
+ * [Get Shockt - Preferred Distributor for North America](https://getshockt.com/products/electric-racing-karts/blue-shock-race-racing-e-kart-x3)
  * [Blue Shock Race X3 Racing E-Kart](https://blueshockrace.com/electric-racing-karts/)
  * [Comet Kart Sales](https://cometkartsales.com/)
  * [Coyote Karts](https://coyotekarts.com/)
  * [PMC Kart](https://www.pmckart.com/)
- * [Top Kart USA Electric](http://topkartusa.net/electric/)
+ * [Top Kart USA Electric](https://topkartusa.net/electric/)
 
 ### Tires
 
