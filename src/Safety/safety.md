@@ -2,6 +2,7 @@
 # Safety Rules
 
 - [General Safety](#general-safety)
+- [Fire Safety](#fire-safety)
 - [Required Safety Components](#required-safety-components)
 - [Remote Control](#remote-control)
 - [Enforcement](#enforcement)
@@ -13,6 +14,24 @@
 
    1. Teams are not permitted on track while Go-Karts are running.
       * If a team needs to retrieve a Go-Kart then the team must wait for all Go-Karts to stop on track and the team has been given approval from race officials.
+   2. Teams are expected to be able to operate their go-karts completely remotely to reduce risk of on-track interventions.
+      * Expected Remote Operations Include:
+        * Resetting/Restarting Systems.
+      * _Read As: Teams are encouraged to reduce the need for manual resetting of anything on the go-karts_
+
+## Fire Safety
+
+  1. All teams must have at minimum 2 fire extinguishers.
+     * Fire Extinguishers must be rated for the type of batteries a team is using.
+     * If a team is using a combination of battery compositions then the team must have extinguishers for each type of battery.
+  2. Examples of Fire Supression allowed:
+     1. Lead-Acid Batteries:
+        * Cat Litter
+        * Sand
+        * Class ABC Fire Extinguisher
+     2. Lithium Batteries:
+        * Class D Fire Extinguisher
+        * Specialized Lithium Extinguisher - [E-FireX *not affiliated*](https://efirex.com/product/e-firex-fire-extinguisher-2-liter/)
 
 ## Required Safety Components
 
@@ -33,16 +52,20 @@
       * Can be remote controlled --not required
     * Team must explain all kill-switches in inspection
  4. Moving Commponents must have covers to prevent risk of injury or damage.
-    1. Chains must have chain covers.
+    * Chains must have chain covers.
  5. There must be no exposed sharp edges on the kart.
  6. Front and Rear bumpers are required.
-    1. Bumpers cannot be custom made and must be purchased.
+    * Bumpers cannot be custom made and must be purchased.
 
 ## Remote Control
 
- 1. Remote Control is needed to drive the kart in and out of the pits.
- 2. Remote Control is needed to drive around other teams that may be on track during practice.
- 3. The __Remote Estop__ controller is required to reach at minimum 200 meters line of sight to the kart.
+ 1. Complete Remote Control is required.
+    * Teams must be able to control the go-kart from their pit area regardless of go-kart position on the track.
+    * Remote Control encompasses the following actions:
+      * Triggering Safety Systems
+      * RC Driving
+      * Switchting between RC and Autonomous modes.
+ 2. The __Remote Estop__ controller is required to reach at minimum 200 meters line of sight to the kart.
 
 ## Enforcement
 
@@ -65,3 +88,5 @@ __The following resources are not affiliated with Autonomous Karting Series Inc.
  * [Crossfire Betaflight Article](https://oscarliang.com/crossfire-betaflight/) - Describes a solution for how to achieve long distance communication utilizing a 900MHz frequency.
  * [FrSky R9M Solution](https://oscarliang.com/setup-r9m-r9-mini-betaflight/) - Describes a solution utilizing used LoRa 900MHz frequency to achieve long distance.
  * [Kar-Tech Wireless Estop System](https://kar-tech.com/wireless-estop-system-multiple-receiver.html) - Off the shelf solution for Remote Estop.
+ * [Radiomaster Pocket Radio Controller - ELRS](https://radiomasterrc.com/products/pocket-radio-controller-m2) - RadioMaster RC Controller with long-range capabilities
+ * [Radiomaster RP4TD ExpressLRS](https://radiomasterrc.com/products/rp4td-expresslrs-2-4ghz-diversity-receiver) - RadioMaster RC Receiver with long-range capabilities
