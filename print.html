@@ -13,21 +13,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -39,10 +38,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex.js";
+            window.path_to_searchindex_js = "searchindex-0b0e02bf.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="toc-887f43f0.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -56,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div id="body-container">
+    <div id="mdbook-body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -85,12 +84,12 @@
             html.classList.add("js");
         </script>
 
-        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             let sidebar = null;
-            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -105,39 +104,39 @@
             }
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
                 <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
             </noscript>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
+        <div id="mdbook-page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
                         </label>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
                         </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
                         </button>
                     </div>
 
@@ -145,141 +144,143 @@
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
                     </div>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
                         <div class="search-wrapper">
-                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <i class="fa fa-spinner fa-spin"></i>
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
                             </div>
                         </div>
                     </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
                         </ul>
                     </div>
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
 
-                <div id="content" class="content">
+                <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="autonomous-karting-series-official-rulebook"><a class="header" href="#autonomous-karting-series-official-rulebook">Autonomous Karting Series Official Rulebook</a></h1>
 <h2 id="ruleset-table-of-contents"><a class="header" href="#ruleset-table-of-contents">Ruleset Table of Contents</a></h2>
 <ul>
 <li>
-<p><a href="Administrative/administrative.html">Administrative</a></p>
+<p><a href="#administrative">Administrative</a></p>
 <ul>
-<li><a href="Administrative/administrative.html#who-is-allowed-to-compete">Who Is Allowed To Compete</a></li>
-<li><a href="Administrative/administrative.html#required-roles">Required Roles</a></li>
-<li><a href="Administrative/administrative.html#documentation-requirements-from-teams">Documentation Requirements From Teams</a></li>
-<li><a href="Administrative/administrative.html#jurisdiction-of-rules">Jurisdiction Of Rules</a></li>
-<li><a href="Administrative/administrative.html#disclaimer">Disclaimer</a></li>
+<li><a href="#who-is-allowed-to-compete">Who Is Allowed To Compete</a></li>
+<li><a href="#required-roles">Required Roles</a></li>
+<li><a href="#documentation-requirements-from-teams">Documentation Requirements From Teams</a></li>
+<li><a href="#jurisdiction-of-rules">Jurisdiction Of Rules</a></li>
+<li><a href="#disclaimer-1">Disclaimer</a></li>
 </ul>
 </li>
 <li>
-<p><a href="Electrical/electrical.html">Electrical</a></p>
+<p><a href="#electrical-rules">Electrical</a></p>
 <ul>
-<li><a href="Electrical/electrical.html#drivetrain">Drivetrain</a></li>
-<li><a href="Electrical/electrical.html#batteries">Batteries</a></li>
-<li><a href="Electrical/electrical.html#general-wiring">General Wiring</a></li>
-<li><a href="Electrical/electrical.html#computers-and-sensors">Computers and Sensors</a></li>
-<li><a href="Electrical/electrical.html#design-documentation">Design Documentation</a></li>
+<li><a href="#drivetrain">Drivetrain</a></li>
+<li><a href="#batteries">Batteries</a></li>
+<li><a href="#general-wiring">General Wiring</a></li>
+<li><a href="#computers-and-sensors">Computers and Sensors</a></li>
+<li><a href="#design-documentation">Design Documentation</a></li>
 </ul>
 </li>
 <li>
-<p><a href="Software/software.html">Software</a></p>
+<p><a href="#software--network-rules">Software</a></p>
 </li>
 <li>
-<p><a href="Mechanical/mechanical.html">Mechanical</a></p>
+<p><a href="#mechanical-rules">Mechanical</a></p>
 <ul>
-<li><a href="Mechanical/mechanical.html#frame--chassis">Frame / Chassis</a></li>
-<li><a href="Mechanical/mechanical.html#tires">Tires</a></li>
-<li><a href="Mechanical/mechanical.html#brakes">Brakes</a></li>
-<li><a href="Mechanical/mechanical.html#weight">Weight</a></li>
-<li><a href="Mechanical/mechanical.html#mounting">Mounting</a></li>
-<li><a href="Mechanical/mechanical.html#materials">Materials</a></li>
-<li><a href="Mechanical/mechanical.html#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
-<li><a href="Mechanical/mechanical.html#resources">Resources</a>
+<li><a href="#frame--chassis">Frame / Chassis</a></li>
+<li><a href="#tires">Tires</a></li>
+<li><a href="#brakes">Brakes</a></li>
+<li><a href="#weight">Weight</a></li>
+<li><a href="#mounting">Mounting</a></li>
+<li><a href="#materials">Materials</a></li>
+<li><a href="#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
+<li><a href="#resources">Resources</a>
 <ul>
-<li><a href="Mechanical/mechanical.html#go-kart-suppliers">Go Kart Suppliers</a></li>
-<li><a href="Mechanical/mechanical.html#tires-1">Tires</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="Safety/safety.html">Safety</a></p>
-<ul>
-<li><a href="Safety/safety.html#general-safety">General Safety</a></li>
-<li><a href="Safety/safety.html#required-safety-components">Required Safety Components</a></li>
-<li><a href="Safety/safety.html#remote-control">Remote Control</a></li>
-<li><a href="Safety/safety.html#enforcement">Enforcement</a></li>
-<li><a href="Safety/safety.html#resources">Resources</a>
-<ul>
-<li><a href="Safety/safety.html#bodywork">Bodywork</a></li>
-<li><a href="Safety/safety.html#long-range-control-including-remote-estop">Long Range Control (Including Remote EStop)</a></li>
+<li><a href="#go-kart-suppliers">Go Kart Suppliers</a></li>
+<li><a href="#tires-1">Tires</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="Race_Procedure/race_procedure.html">Race Procedure</a></p>
+<p><a href="#safety-rules">Safety</a></p>
 <ul>
-<li><a href="Race_Procedure/race_procedure.html#spirit-of-the-competition">Spirit of the Competition</a></li>
-<li><a href="Race_Procedure/race_procedure.html#event-structure">Event Structure</a></li>
-<li><a href="Race_Procedure/race_procedure.html#race-track-definition">Race Track Definition</a></li>
-<li><a href="Race_Procedure/race_procedure.html#allowed-data-during-race">Allowed Data During Race</a></li>
-<li><a href="Race_Procedure/race_procedure.html#multi-kart-exposition-runs">Multi-Kart Exposition Runs</a></li>
-<li><a href="Race_Procedure/race_procedure.html#awards">Awards</a></li>
+<li><a href="#general-safety">General Safety</a></li>
+<li><a href="#required-safety-components">Required Safety Components</a></li>
+<li><a href="#remote-control">Remote Control</a></li>
+<li><a href="#enforcement">Enforcement</a></li>
+<li><a href="#resources-1">Resources</a>
+<ul>
+<li><a href="#bodywork">Bodywork</a></li>
+<li><a href="#long-range-control-including-remote-estop">Long Range Control (Including Remote EStop)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#race-procedure-rules">Race Procedure</a></p>
+<ul>
+<li><a href="#spirit-of-the-competition">Spirit of the Competition</a></li>
+<li><a href="#event-structure">Event Structure</a></li>
+<li><a href="#race-track-definition">Race Track Definition</a></li>
+<li><a href="#allowed-data-during-race">Allowed Data During Race</a></li>
+<li><a href="#multi-kart-exposition-runs">Multi-Kart Exposition Runs</a></li>
+<li><a href="#awards">Awards</a></li>
 </ul>
 </li>
 <li>
 <p><a href="Appendix/Appendix.html">Appendix</a></p>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
 <p>This repository contains the development pages and official document for the Autonomous Karting Series Competition Rules. The individual sections of the rules have a folder with a markdown file for development and discussion purposes. The official document will be a protected latex file that requires approval to edit and modify.</p>
 <p>Development Rulebook can be seen <a href="https://github.com/autonomous-karting-series/Rulebook">here</a></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="changes"><a class="header" href="#changes">Changes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="changes"><a class="header" href="#changes">Changes</a></h1>
 <h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
 <p>This section covers changes that take place during Team Leads meetings with AKS and are not yet in the official rulebook but overwrite existing rules or add clarification to them.</p>
 <h3 id="there-are-not-currently-any-unofficial-changes-to-the-rules"><a class="header" href="#there-are-not-currently-any-unofficial-changes-to-the-rules">THERE ARE NOT CURRENTLY ANY UNOFFICIAL CHANGES TO THE RULES</a></h3>
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
 <h1 id="administrative"><a class="header" href="#administrative">Administrative</a></h1>
 <ul>
-<li><a href="Administrative/administrative.html#who-is-allowed-to-compete">Who Is Allowed To Compete</a></li>
-<li><a href="Administrative/administrative.html#required-roles">Required Roles</a></li>
-<li><a href="Administrative/administrative.html#documentation-requirements-from-teams">Documentation Requirements From Teams</a></li>
-<li><a href="Administrative/administrative.html#jurisdiction-of-rules">Jurisdiction Of Rules</a></li>
-<li><a href="Administrative/administrative.html#disclaimer">Disclaimer</a></li>
+<li><a href="#who-is-allowed-to-compete">Who Is Allowed To Compete</a></li>
+<li><a href="#required-roles">Required Roles</a></li>
+<li><a href="#documentation-requirements-from-teams">Documentation Requirements From Teams</a></li>
+<li><a href="#jurisdiction-of-rules">Jurisdiction Of Rules</a></li>
+<li><a href="#disclaimer-1">Disclaimer</a></li>
 </ul>
 <h2 id="who-is-allowed-to-compete"><a class="header" href="#who-is-allowed-to-compete">Who Is Allowed To Compete</a></h2>
 <ol>
 <li>Teams are required to be affiliated with an Academic Institution.
 <ul>
-<li>If the Academic Institution does not allow public affiliations then this is waived as long as the team members are comprised of students from aformentioned Academic Institution.</li>
+<li>If the Academic Institution does not allow public affiliations then this is waived as long as the team members are comprised of students from the aformentioned Academic Institution.</li>
 </ul>
 </li>
 <li>A team can consist of members from more than one Academic Institution, however any one person cannot be on multiple teams.</li>
 <li>One Academic Institution can host multiple teams.</li>
-<li>Organizations are allowed to sponsor and/or mentor a team but are not allowed to via mentors contribute significantly to the go-kart of a team.
+<li>Organizations are allowed to sponsor and/or mentor a team but are not allowed to contribute significantly to the go-kart of a team via mentors.
 <ul>
-<li>Judgment of "significant contribution" is at the discretion of the competition organizers.</li>
+<li>Judgment of “significant contribution” is at the discretion of the competition organizers.</li>
 </ul>
 </li>
 </ol>
@@ -287,20 +288,20 @@
 <ol>
 <li>All teams must establish at least one member as their Autonomous Safety Officer.
 <ul>
-<li>The Autonomous Safety Office will ensure that their team’s kart is operating in a safe manner on and off track.</li>
+<li>The Autonomous Safety Officer will ensure that their team’s kart is operating in a safe manner on and off track.</li>
 </ul>
 </li>
-<li>All teams must establish at least one Designated "Driver".
+<li>All teams must establish at least one Designated Vehicle Operator.
 <ul>
-<li>A Designated Driver is a separate person from a team’s Autonomous Safety Officer.</li>
-<li>A Designated Driver is responsible for controlling the team’s kart as the kart is being operated remotely.</li>
+<li>A Designated Vehicle Operator is a separate person from a team’s Autonomous Safety Officer.</li>
+<li>A Designated Vehicle Operator is responsible for controlling the team’s kart as the kart is being operated remotely.</li>
 </ul>
 </li>
 </ol>
 <h2 id="documentation-requirements-from-teams"><a class="header" href="#documentation-requirements-from-teams">Documentation Requirements From Teams</a></h2>
 <ol>
-<li>All participants must sign and submit a liability waiver.</li>
-<li>All teams must submit the required videos and design documentation before specified race deadlines.</li>
+<li>All participants must sign and submit a liability waiver, photo release, and any event specific documents.</li>
+<li>All teams must submit the required design documentation during the race check-in.</li>
 <li>Some events may require certain components and features to be demonstrated in person.
 <ol>
 <li>Teams must be able to demonstrate all components and features in person if requested.</li>
@@ -317,23 +318,24 @@
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
 <h1 id="mechanical-rules"><a class="header" href="#mechanical-rules">Mechanical Rules</a></h1>
 <ul>
-<li><a href="Mechanical/mechanical.html#frame--chassis">Frame / Chassis</a></li>
-<li><a href="Mechanical/mechanical.html#tires">Tires</a></li>
-<li><a href="Mechanical/mechanical.html#brakes">Brakes</a></li>
-<li><a href="Mechanical/mechanical.html#weight">Weight</a></li>
-<li><a href="Mechanical/mechanical.html#mounting">Mounting</a></li>
-<li><a href="Mechanical/mechanical.html#materials">Materials</a></li>
-<li><a href="Mechanical/mechanical.html#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
-<li><a href="Mechanical/mechanical.html#resources">Resources</a>
+<li><a href="#frame--chassis">Frame / Chassis</a></li>
+<li><a href="#tires">Tires</a></li>
+<li><a href="#brakes">Brakes</a></li>
+<li><a href="#weight">Weight</a></li>
+<li><a href="#mounting">Mounting</a></li>
+<li><a href="#weatherproofing">Weatherproofing</a></li>
+<li><a href="#materials">Materials</a></li>
+<li><a href="#bom-bill-of-materials">BOM (Bill of Materials)</a></li>
+<li><a href="#resources">Resources</a>
 <ul>
-<li><a href="Mechanical/mechanical.html#go-kart-suppliers">Go Kart Suppliers</a></li>
-<li><a href="Mechanical/mechanical.html#tires-1">Tires</a></li>
+<li><a href="#go-kart-suppliers">Go Kart Suppliers</a></li>
+<li><a href="#tires-1">Tires</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="frame--chassis"><a class="header" href="#frame--chassis">Frame / Chassis</a></h2>
 <ol>
-<li>Any Commercial Full Size "Sprint Kart" chassis may be used
+<li>Any Commercial Full Size “Sprint Kart” chassis may be used
 <ul>
 <li>Custom Chassis may not be built from scratch.</li>
 <li>For new teams, the Blue Shock Race X3 E-Kart is the new suggested platform to build on.</li>
@@ -355,12 +357,14 @@
 </li>
 </ul>
 </li>
-<li>All Chassis components must be documented on a BOM declaring the part number and supplier.
-<ol>
-<li>For Custom Chassis the BOM must be broken down by fabricated parts.</li>
-</ol>
-</li>
+<li>All Chassis components must be documented on a BOM declaring the part number and supplier.</li>
 <li>All Chassis must include mounting points for Front and Rear bumpers.</li>
+<li>Mounting Components may be welded to the chassis of the go-kart.
+<ul>
+<li>The chassis integrity must not be compromised by the welding process.</li>
+<li>The process of welding to the chassis must act to only add structural parts and must not involve the removal of any section.</li>
+</ul>
+</li>
 </ol>
 <h2 id="tires"><a class="header" href="#tires">Tires</a></h2>
 <ol>
@@ -378,11 +382,19 @@
 <li><em>Other tires may be allowed as long as they are of similar durometer to the above compounds. Please contact competition organizers for clarification on allowable tire compounds.</em></li>
 </ul>
 </li>
-<li>Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>.</li>
+<li>Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a <strong>Castle Nut and Cotter Pin</strong> or with a <strong>Locking Nut and Safety Wire</strong>. (<em>Refer to the wiki for examples.</em>)
+<ul>
 <li>If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a <strong>Locking Nut</strong>. Safety Wires are not required.</li>
+</ul>
+</li>
 </ol>
 <h2 id="brakes"><a class="header" href="#brakes">Brakes</a></h2>
 <ol>
+<li>Go-Karts must have a minimum of 1 mechanical braking mechanism.
+<ul>
+<li>Motor-Based braking only in lieu of a mechanical brake is prohibited.</li>
+</ul>
+</li>
 <li>Go-Karts must at minimum have brakes on both rear tires.
 <ul>
 <li>A rear axle with 1 brake assembly attached will count for both rear tires.</li>
@@ -394,7 +406,7 @@
 <h2 id="weight"><a class="header" href="#weight">Weight</a></h2>
 <ol>
 <li>There is no maximum weight.</li>
-<li>There is a minimum weight of 275 pounds with all components attached to the kart.
+<li>There is a minimum weight of 275 lbs with all components attached to the kart.
 <ul>
 <li>It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below they are not a requirement but a suggestion for a starting distribution.
 <ul>
@@ -403,6 +415,7 @@
 <li>For further information please see this <a href="https://www.woodbridgekartclub.com/how-to/kart-scaling-weight-distribution/">article</a> <em>not affiliated</em>.</li>
 </ul>
 </li>
+<li>Suggested go-kart weight is above 300 lbs.</li>
 </ul>
 </li>
 </ol>
@@ -410,32 +423,65 @@
 <ol>
 <li>Any component mounted directly to the chassis not mentioned already must be secured with a threadlocker.
 <ol>
-<li>Components that are needed to be removed and remounted frequently may be secured with a <strong>Locking Nut</strong>.</li>
-<li>Electrical wires may be secured with cable ties or similar items.</li>
+<li>Components that are needed to be removed and remounted frequently may be secured with a <strong>Positively Locking Nut</strong>.</li>
+<li>Electrical wires must be secured with cable ties or similar items.</li>
 </ol>
 </li>
 <li><strong>Internally Mounted Components</strong> must be securely mounted such that the components do not become detached or loose inside their container.</li>
 <li>The above mounting rules are enforcable through visual inspection with physical inspections if there is concern.</li>
+</ol>
+<h2 id="weatherproofing"><a class="header" href="#weatherproofing">Weatherproofing</a></h2>
+<blockquote>
+<p>The purpose of requiring weatherproof containers is to prevent interruption due to light weather fluctuations. There is no intent to run in Heavy/Severe weather. IP65 is rated to withstand dust intrusion and water intrusion up to a direct stream of water.</p>
+</blockquote>
+<ol>
+<li>All components mounted to the go-kart chassis that are not rated for exterior use must be contained within an <strong>IP65 Rated</strong> Container.
+<ul>
+<li>Containers must use <strong>IP65 Rated</strong> grommets and fittings for cables and connectors.</li>
+<li>Containers must have ventilation.</li>
+</ul>
+</li>
+<li>Examples of components that must be in weather-rated containers:
+<ul>
+<li>Motor Controller <em>(if not rated for external use)</em></li>
+<li>Batteries</li>
+<li>Computers</li>
+<li>Microcontrollers</li>
+<li>Breakout/Distribution Boards</li>
+</ul>
+</li>
 </ol>
 <h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ol>
 <li>Any non-Internally Mounted Component must not be subject to the following:
 <ul>
 <li>Acrylic</li>
-<li>Any <strong>Brittle Material</strong></li>
+<li>Any <strong>Brittle Material</strong>
+<ul>
+<li>Most PLA and ABS 3D prints are classified as brittle.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Non-Brittle materials contain but are not limited to:
+<ul>
+<li>Polycarbonate</li>
+<li>Delrin</li>
+<li>PETG</li>
+<li>TPU</li>
 </ul>
 </li>
 </ol>
 <h2 id="bom-bill-of-materials"><a class="header" href="#bom-bill-of-materials">BOM (Bill of Materials)</a></h2>
 <ol>
 <li>Teams must provide a Bill of Materials for all mechanical components <strong>NOT</strong> mounted internally.
-<ol>
-<li>Each mechanical component must be represented by an individual section in the BOM.</li>
-</ol>
-</li>
-<li>A Team's Mechanical BOM cost shall not exceed $17,500 USD.
 <ul>
-<li>A team is able to estimate the cost of a component if it is unsure of the total value of the component. <em>This must be stated if the cost is estimated</em>.</li>
+<li>Each mechanical assembly must be represented by an individual section in the BOM.</li>
+</ul>
+</li>
+<li>A team is able to estimate the cost of a component if it is unsure of the total value of the component.
+<ul>
+<li>This must be stated if the cost is estimated.</li>
 </ul>
 </li>
 </ol>
@@ -461,11 +507,11 @@
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
 <h1 id="electrical-rules"><a class="header" href="#electrical-rules">Electrical Rules</a></h1>
 <ul>
-<li><a href="Electrical/electrical.html#drivetrain">Drivetrain</a></li>
-<li><a href="Electrical/electrical.html#batteries">Batteries</a></li>
-<li><a href="Electrical/electrical.html#general-wiring">General Wiring</a></li>
-<li><a href="Electrical/electrical.html#computers-and-sensors">Computers and Sensors</a></li>
-<li><a href="Electrical/electrical.html#design-documentation">Design Documentation</a></li>
+<li><a href="#drivetrain">Drivetrain</a></li>
+<li><a href="#batteries">Batteries</a></li>
+<li><a href="#general-wiring">General Wiring</a></li>
+<li><a href="#computers-and-sensors">Computers and Sensors</a></li>
+<li><a href="#design-documentation">Design Documentation</a></li>
 </ul>
 <h2 id="drivetrain"><a class="header" href="#drivetrain">Drivetrain</a></h2>
 <ol>
@@ -473,14 +519,18 @@
 <li>Teams are allowed to use Brushed and Brushless motors.</li>
 <li>Teams are not limited to the number of motors driving the rear tires.</li>
 <li>Teams are not permitted to use motors to drive the front tires.</li>
-<li>The <strong>Total Drivetrain Output</strong> of the motor(s) driving the rear tires must not exceed 15kW.
-<ol>
+<li>The <strong>Total Drivetrain Output</strong> of the motor(s) driving the rear tires must not exceed 15KW.
+<ul>
 <li>Teams are permitted to use higher output motors as long as it is configured not to exceed the above value.</li>
 <li>Total Drivetrain Output must be measured before motor controllers.</li>
 <li>Teams are encouraged to seek out ways to record their Total Drivetrain Output in a manner that the data can be monitored without external systems.</li>
-</ol>
+</ul>
 </li>
-<li>The <strong>Wiring Harness</strong> for the Drivetrain must include a fuse for the maximum expected current draw for a team's configured Total Drivetrain Output.</li>
+<li>The <strong>Wiring Harness</strong> for the Drivetrain must include a fuse for the maximum expected current draw for a team’s configured Total Drivetrain Output.
+<ul>
+<li><em>Example: If a motor allows 20KW then the fuse must be able to support the full 20KW regardless of the team’s intended power output.</em></li>
+</ul>
+</li>
 </ol>
 <h2 id="batteries"><a class="header" href="#batteries">Batteries</a></h2>
 <ol>
@@ -493,23 +543,56 @@
 <li>Each battery system must have an accessible and clearly labeled Kill Switch.</li>
 <li>Teams are allowed to utilize the following battery chemistries:
 <ul>
-<li>Lithium Polymer (LiPo)</li>
+<li>Lithium Polymer (LiPo)
+<ul>
+<li>Lithium Cobalt Oxide (LCO)</li>
+<li>Lithium Manganese Oxide (LMO)</li>
+<li>Lithium Iron Phosphate (LFP)</li>
+<li>Lithium Nickel Manganese Cobalt Oxide (NMC)</li>
+<li>Lithium Nickel Cobalt Aluminum Oxide (NCA)</li>
+<li>Lithium Titanate (LTO)</li>
+</ul>
+</li>
 <li>Lithium Ion Cells (18650, 21700, etc.)</li>
-<li>Lithium Iron Phosphate (LiFePO4)</li>
 <li>Lead-Acid</li>
 </ul>
 </li>
 <li>All batteries must satisfy the following criteria:
 <ol>
 <li>Clearly labelled and secured in place.</li>
-<li>Safely constructed.</li>
-<li>Sufficiently cooled.</li>
+<li>Safely constructed.
+<ul>
+<li>Batteries must be enclosed within a proper container that allows cell expansion.
+<ul>
+<li>Shrink-Wrap is not a suitable enclosure.</li>
+</ul>
+</li>
+<li><em>See mechanical requirements for weatherproofing.</em></li>
+</ul>
+</li>
+<li>Sufficiently cooled.
+<ul>
+<li>Batteries enclosures must have ventilation.</li>
+</ul>
+</li>
 <li>Cannot have any exposed connectors or contacts.</li>
 <li>Contains Short Circuit protections to disconnect power in the event of a short circuit.</li>
 </ol>
 </li>
+<li>Battery enclosures should contain an internal fire supression system.
+<ul>
+<li><em>This rule is not yet enforceable, however, this is the intended direction.</em></li>
+<li><a href="https://www.awarefire.com/lithium-ion-battery-fire-extinguisher/">In Battery Extinguisher</a></li>
+</ul>
+</li>
 <li><strong>Drivetrain Battery System</strong> Cannot exceed 100V nominal.</li>
 <li><strong>Auxiliary Battery System</strong> Cannot exceed 50V nominal.</li>
+<li>Batteries must use <a href="https://www.andersonpower.com/us/en/category.html/wire-to-wire/sb/sb-175.html">Anderson SB® 175</a> connectors as the external connectors.
+<ul>
+<li>Alternative connectors may be allowed on special request from teams.</li>
+<li>The alternate connectors must at minimum meet the Anderson Specifications.</li>
+</ul>
+</li>
 </ol>
 <h2 id="general-wiring"><a class="header" href="#general-wiring">General Wiring</a></h2>
 <ol>
@@ -517,6 +600,11 @@
 <ul>
 <li>Wires are not contained when they are able to easily get caught on something or loosely laying on the kart.</li>
 <li>Wires are contained when they are tied down and/or enclosed in a wire loom that is tied down.</li>
+</ul>
+</li>
+<li>Internal wiring must be routed and internally mounted such that the wires do not get tangled.
+<ul>
+<li><em>Example: All internal wiring must be “best-effort” neat and orderly.</em></li>
 </ul>
 </li>
 <li>All wires must be rated appropriately for the power being drawn through them.</li>
@@ -545,25 +633,31 @@
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
 <h1 id="race-procedure-rules"><a class="header" href="#race-procedure-rules">Race Procedure Rules</a></h1>
 <ul>
-<li><a href="Race_Procedure/race_procedure.html#spirit-of-the-competition">Spirit of the Competition</a></li>
-<li><a href="Race_Procedure/race_procedure.html#event-structure">Event Structure</a></li>
-<li><a href="Race_Procedure/race_procedure.html#race-track-definition">Race Track Definition</a></li>
-<li><a href="Race_Procedure/race_procedure.html#allowed-data-during-race">Allowed Data During Race</a></li>
-<li><a href="Race_Procedure/race_procedure.html#multi-kart-exposition-runs">Multi-Kart Exposition Runs</a></li>
-<li><a href="Race_Procedure/race_procedure.html#awards">Awards</a></li>
+<li><a href="#spirit-of-the-competition">Spirit of the Competition</a></li>
+<li><a href="#event-structure">Event Structure</a></li>
+<li><a href="#race-track-definition">Race Track Definition</a></li>
+<li><a href="#allowed-data-during-race">Allowed Data During Race</a></li>
+<li><a href="#multi-kart-exposition-runs">Multi-Kart Exposition Runs</a></li>
+<li><a href="#awards">Awards</a></li>
 </ul>
 <h2 id="spirit-of-the-competition"><a class="header" href="#spirit-of-the-competition">Spirit of the Competition</a></h2>
 <p>The goal of the Autonomous Karting Series is to create an accessible and exciting autonomous go kart race. The race presents a realistic scenario in which teams need to build go-karts that will race and compete on a track autonomously. It is encouraged that teams will work to create innovative and performant hardware, electrical, and software solutions.</p>
 <h2 id="event-structure"><a class="header" href="#event-structure">Event Structure</a></h2>
 <ol>
-<li>There will be multiple Official Practice Sessions throughout a race event and a Official Race Session.
-<ol>
+<li>There will be multiple Official Practice Sessions throughout a Race Event and a Official Race Session.
+<ul>
 <li>Official Practice sessions will follow competition safety rules as if the practice session was a Race Session.</li>
 <li>Official Race Session will be 1 kart running on the track at a time.</li>
-</ol>
+<li>Race Events may have Unofficial Practice Sessions.
+<ul>
+<li>During Unofficial Practice Sessions, <strong>Secondary Vehicles</strong> may be used for data collection for development purposes only.</li>
+<li><strong>Secondary Vehicles</strong> are not allowed on the track at any other time during the Race Event.</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>Team rankings will be by total time taken to complete the 5 laps.</li>
-<li>The team order in which each category will be run will be decided in order of fastest laps ran during official practice sessions.</li>
+<li>The team order will be decided in order of fastest laps ran during official practice sessions.</li>
 </ol>
 <h2 id="race-track-definition"><a class="header" href="#race-track-definition">Race Track Definition</a></h2>
 <ol>
@@ -585,9 +679,12 @@
 </li>
 <li>A non-encompassing list of allowed data:
 <ul>
-<li>GPS waypoints</li>
+<li>GPS waypoints
+<ul>
 <li>Track centerline</li>
 <li>Track edges</li>
+</ul>
+</li>
 <li>Track images</li>
 <li>Track pointcloud</li>
 </ul>
@@ -618,14 +715,15 @@
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
 <h1 id="safety-rules"><a class="header" href="#safety-rules">Safety Rules</a></h1>
 <ul>
-<li><a href="Safety/safety.html#general-safety">General Safety</a></li>
-<li><a href="Safety/safety.html#required-safety-components">Required Safety Components</a></li>
-<li><a href="Safety/safety.html#remote-control">Remote Control</a></li>
-<li><a href="Safety/safety.html#enforcement">Enforcement</a></li>
-<li><a href="Safety/safety.html#resources">Resources</a>
+<li><a href="#general-safety">General Safety</a></li>
+<li><a href="#fire-safety">Fire Safety</a></li>
+<li><a href="#required-safety-components">Required Safety Components</a></li>
+<li><a href="#remote-control">Remote Control</a></li>
+<li><a href="#enforcement">Enforcement</a></li>
+<li><a href="#resources-1">Resources</a>
 <ul>
-<li><a href="Safety/safety.html#bodywork">Bodywork</a></li>
-<li><a href="Safety/safety.html#long-range-control-including-remote-estop">Long Range Control (Including Remote EStop)</a></li>
+<li><a href="#bodywork">Bodywork</a></li>
+<li><a href="#long-range-control-including-remote-estop">Long Range Control (Including Remote EStop)</a></li>
 </ul>
 </li>
 </ul>
@@ -635,6 +733,42 @@
 <ul>
 <li>If a team needs to retrieve a Go-Kart then the team must wait for all Go-Karts to stop on track and the team has been given approval from race officials.</li>
 </ul>
+</li>
+<li>Teams are expected to be able to operate their go-karts completely remotely to reduce risk of on-track interventions.
+<ul>
+<li>Expected Remote Operations Include:
+<ul>
+<li>Resetting/Restarting Systems.</li>
+</ul>
+</li>
+<li><em>Read As: Teams are encouraged to reduce the need for manual resetting of anything on the go-karts</em></li>
+</ul>
+</li>
+</ol>
+<h2 id="fire-safety"><a class="header" href="#fire-safety">Fire Safety</a></h2>
+<ol>
+<li>All teams must have at minimum 2 fire extinguishers.
+<ul>
+<li>Fire Extinguishers must be rated for the type of batteries a team is using.</li>
+<li>If a team is using a combination of battery compositions then the team must have extinguishers for each type of battery.</li>
+</ul>
+</li>
+<li>Examples of Fire Supression allowed:
+<ol>
+<li>Lead-Acid Batteries:
+<ul>
+<li>Cat Litter</li>
+<li>Sand</li>
+<li>Class ABC Fire Extinguisher</li>
+</ul>
+</li>
+<li>Lithium Batteries:
+<ul>
+<li>Class D Fire Extinguisher</li>
+<li>Specialized Lithium Extinguisher - <a href="https://efirex.com/product/e-firex-fire-extinguisher-2-liter/">E-FireX <em>not affiliated</em></a></li>
+</ul>
+</li>
+</ol>
 </li>
 </ol>
 <h2 id="required-safety-components"><a class="header" href="#required-safety-components">Required Safety Components</a></h2>
@@ -667,35 +801,45 @@
 <ul>
 <li>Minimum of 1 switch, if there are multiple switches then any 1 switch must disconnect all power.</li>
 <li>Must be a Push-Button style Emergency Stop Switch.</li>
-<li>Can be remote controlled --not required</li>
+<li>Can be remote controlled –not required</li>
 </ul>
 </li>
 <li>Team must explain all kill-switches in inspection</li>
 </ul>
 </li>
 <li>Moving Commponents must have covers to prevent risk of injury or damage.
-<ol>
+<ul>
 <li>Chains must have chain covers.</li>
-</ol>
+</ul>
 </li>
 <li>There must be no exposed sharp edges on the kart.</li>
 <li>Front and Rear bumpers are required.
-<ol>
+<ul>
 <li>Bumpers cannot be custom made and must be purchased.</li>
-</ol>
+</ul>
 </li>
 </ol>
 <h2 id="remote-control"><a class="header" href="#remote-control">Remote Control</a></h2>
 <ol>
-<li>Remote Control is needed to drive the kart in and out of the pits.</li>
-<li>Remote Control is needed to drive around other teams that may be on track during practice.</li>
+<li>Complete Remote Control is required.
+<ul>
+<li>Teams must be able to control the go-kart from their pit area regardless of go-kart position on the track.</li>
+<li>Remote Control encompasses the following actions:
+<ul>
+<li>Triggering Safety Systems</li>
+<li>RC Driving</li>
+<li>Switchting between RC and Autonomous modes.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>The <strong>Remote Estop</strong> controller is required to reach at minimum 200 meters line of sight to the kart.</li>
 </ol>
 <h2 id="enforcement"><a class="header" href="#enforcement">Enforcement</a></h2>
 <ol>
 <li>Before a kart is allowed to run on the track it must undergo safety inspections and comply with all rules set forth in this document.
 <ol>
-<li>Team Safety Officers must be present for that team's inspection.</li>
+<li>Team Safety Officers must be present for that team’s inspection.</li>
 </ol>
 </li>
 <li>Inspections may consist of the following:
@@ -718,14 +862,56 @@
 <li><a href="https://oscarliang.com/crossfire-betaflight/">Crossfire Betaflight Article</a> - Describes a solution for how to achieve long distance communication utilizing a 900MHz frequency.</li>
 <li><a href="https://oscarliang.com/setup-r9m-r9-mini-betaflight/">FrSky R9M Solution</a> - Describes a solution utilizing used LoRa 900MHz frequency to achieve long distance.</li>
 <li><a href="https://kar-tech.com/wireless-estop-system-multiple-receiver.html">Kar-Tech Wireless Estop System</a> - Off the shelf solution for Remote Estop.</li>
+<li><a href="https://radiomasterrc.com/products/pocket-radio-controller-m2">Radiomaster Pocket Radio Controller - ELRS</a> - RadioMaster RC Controller with long-range capabilities</li>
+<li><a href="https://radiomasterrc.com/products/rp4td-expresslrs-2-4ghz-diversity-receiver">Radiomaster RP4TD ExpressLRS</a> - RadioMaster RC Receiver with long-range capabilities</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><!-- omit in toc -->
-<h1 id="software-rules"><a class="header" href="#software-rules">Software Rules</a></h1>
+<h1 id="software--network-rules"><a class="header" href="#software--network-rules">Software &amp; Network Rules</a></h1>
 <ul>
-<li><a href="Software/software.html#wip"><strong>WIP</strong></a></li>
+<li><a href="#network">Network</a></li>
+<li><a href="#rcs-black-box">RCS Black Box</a></li>
 </ul>
-<h3 id="wip"><a class="header" href="#wip"><strong>WIP</strong></a></h3>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix"><a class="header" href="#appendix">Appendix</a></h1>
+<h2 id="network"><a class="header" href="#network">Network</a></h2>
+<ol>
+<li>Teams are not allowed to use their own personal network devices to communicate with the go-kart from the pit.</li>
+<li>Each team will be provided an ethernet drop that will be able to connect to the go-kart on the track.</li>
+<li>Each team is expected to have a <a href="https://store.ui.com/us/en/products/bulletac-ip67">Ubiquiti Bullet AC</a> for communication on the track.
+<ul>
+<li><a href="https://store.ui.com/us/en/category/all-wireless/products/b-db-ac">Non weatherproof version</a> - <em>use at your own risk</em></li>
+<li><em>More information will be provided in how to setup the bullet network in the wiki.</em></li>
+</ul>
+</li>
+</ol>
+<h2 id="rcs-black-box"><a class="header" href="#rcs-black-box">RCS Black Box</a></h2>
+<blockquote>
+<p>The Race Control System Black Box is a standalone device (with its own internal battery) that will provided to teams at the competition for use of managing go-kart and track safety. All software and designs will be made public. The Black Box network will be completely managed by AKS officials, is 100% visible to teams, and will only handle information described below.</p>
+</blockquote>
+<ol>
+<li>Teams are expected to be able to interface with RCS Black Box via CANBus or USB.</li>
+<li>Teams are expected to send the following information <strong>TO</strong> the RCS Black Box
+<ul>
+<li>Motor Output Power to the Drivetrain</li>
+<li>Health Status - <em>status options to be provided</em></li>
+<li>Control Mode - <strong>Autonomous</strong> or <strong>RC</strong></li>
+<li>Speed - <strong>m/s</strong></li>
+<li>Steering - <em>may not be required</em></li>
+</ul>
+</li>
+<li>Teams will be provided the following information <strong>FROM</strong> the RCS Black Box.
+<ul>
+<li>Track State - <em>states options to be provided</em></li>
+<li>Allowed Control Mode - <strong>Autonomous</strong> or <strong>RC</strong></li>
+<li>GPS RTCM</li>
+</ul>
+</li>
+<li>Teams will be provided a software library to integrate into their existing autonomy stack.
+<ul>
+<li>The library will be available as a C++/Python library or as a ROS2 package.</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="appendix"><a class="header" href="#appendix">Appendix</a></h1>
 <h2 id="definable-terms"><a class="header" href="#definable-terms">Definable Terms</a></h2>
 <ul>
 <li>BOM - Bill of Materials</li>
@@ -739,6 +925,7 @@
 <li>Autonomous Driving - when the kart is being controlled only by the pre-programmed logic contained on the kart.</li>
 <li>RC Driving - when the kart is being controlled by a remote controller exterior to the kart.</li>
 <li>Pre-Mapping - utilizing data collected prior to a race start with the intent to use it to compete in the race.</li>
+<li>Secondary Vehicles - any vehicle that is not the competing go-kart and is controlled remotely.</li>
 </ul>
 
                     </main>
@@ -758,6 +945,11 @@
 
         </div>
 
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
 
 
@@ -766,13 +958,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 
