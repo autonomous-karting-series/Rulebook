@@ -7,6 +7,7 @@
 - [Brakes](#brakes)
 - [Weight](#weight)
 - [Mounting](#mounting)
+- [Weatherproofing](#weatherproofing)
 - [Materials](#materials)
 - [BOM (Bill of Materials)](#bom-bill-of-materials)
 - [Resources](#resources)
@@ -26,8 +27,10 @@
         * With Front Brakes - $5,500 + freight
         * Rear Brakes Only - $4,700 + freight
  2. All Chassis components must be documented on a BOM declaring the part number and supplier.
-    1. For Custom Chassis the BOM must be broken down by fabricated parts.
  3. All Chassis must include mounting points for Front and Rear bumpers.
+ 4. Mounting Components may be welded to the chassis of the go-kart.
+    * The chassis integrity must not be compromised by the welding process.
+    * The process of welding to the chassis must act to only add structural parts and must not involve the removal of any section.
 
 ## Tires
 
@@ -39,45 +42,68 @@
     * Vega XH3 Green (Hard Compound)
     * Vega XM3 White (Medium Compound)
     * _Other tires may be allowed as long as they are of similar durometer to the above compounds. Please contact competition organizers for clarification on allowable tire compounds._
- 3. Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a __Castle Nut and Cotter Pin__ or with a __Locking Nut and Safety Wire__.
- 4. If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a __Locking Nut__. Safety Wires are not required.
+ 3. Go-Karts must have the Front Wheels or Wheel Hubs mounted to the spindle with a __Castle Nut and Cotter Pin__ or with a __Locking Nut and Safety Wire__. (*Refer to the wiki for examples.*)
+    * If teams choose to use Wheel Hubs then the tires must be secured to the Wheel Hub with a __Locking Nut__. Safety Wires are not required.
 
 ## Brakes
 
- 1. Go-Karts must at minimum have brakes on both rear tires.
+ 1. Go-Karts must have a minimum of 1 mechanical braking mechanism.
+    * Motor-Based braking only in lieu of a mechanical brake is prohibited.
+ 2. Go-Karts must at minimum have brakes on both rear tires.
     * A rear axle with 1 brake assembly attached will count for both rear tires.
- 2. Teams are encouraged to have brakes on all 4 wheels of the kart.
- 3. All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.
+ 3. Teams are encouraged to have brakes on all 4 wheels of the kart.
+ 4. All hydraulic brake lines must be braided lines with the appropriate fittings to prevent leaks.
 
 ## Weight
 
  1. There is no maximum weight.
- 2. There is a minimum weight of 275 pounds with all components attached to the kart.
+ 2. There is a minimum weight of 275 lbs with all components attached to the kart.
     * It is advised that teams use corner scales to balance their Go-Kart. Common Go-Kart weight distribution is provided below they are not a requirement but a suggestion for a starting distribution.
       * Front to Back -> 43% to 57%
       * Left to Right -> 50% to 50%
       * For further information please see this [article](https://www.woodbridgekartclub.com/how-to/kart-scaling-weight-distribution/) _not affiliated_.
+    * Suggested go-kart weight is above 300 lbs.
 
 ## Mounting
 
  1. Any component mounted directly to the chassis not mentioned already must be secured with a threadlocker.
-    1. Components that are needed to be removed and remounted frequently may be secured with a __Locking Nut__.
-    2. Electrical wires may be secured with cable ties or similar items.
+    1. Components that are needed to be removed and remounted frequently may be secured with a __Positively Locking Nut__.
+    2. Electrical wires must be secured with cable ties or similar items.
  2. __Internally Mounted Components__ must be securely mounted such that the components do not become detached or loose inside their container.
  3. The above mounting rules are enforcable through visual inspection with physical inspections if there is concern.
+
+## Weatherproofing
+
+ > The purpose of requiring weatherproof containers is to prevent interruption due to light weather fluctuations. There is no intent to run in Heavy/Severe weather. IP65 is rated to withstand dust intrusion and water intrusion up to a direct stream of water.
+
+ 1. All components mounted to the go-kart chassis that are not rated for exterior use must be contained within an __IP65 Rated__ Container.
+    * Containers must use __IP65 Rated__ grommets and fittings for cables and connectors.
+    * Containers must have ventilation.
+ 2. Examples of components that must be in weather-rated containers:
+    * Motor Controller _(if not rated for external use)_
+    * Batteries
+    * Computers
+    * Microcontrollers
+    * Breakout/Distribution Boards
 
 ## Materials
 
  1. Any non-Internally Mounted Component must not be subject to the following:
     * Acrylic
     * Any __Brittle Material__
+      * Most PLA and ABS 3D prints are classified as brittle.
+ 2. Non-Brittle materials contain but are not limited to:
+    * Polycarbonate
+    * Delrin
+    * PETG
+    * TPU
 
 ## BOM (Bill of Materials)
 
  1. Teams must provide a Bill of Materials for all mechanical components __NOT__ mounted internally.
-    1. Each mechanical component must be represented by an individual section in the BOM.
- 2. A Team's Mechanical BOM cost shall not exceed $17,500 USD.
-    * A team is able to estimate the cost of a component if it is unsure of the total value of the component. _This must be stated if the cost is estimated_.
+    * Each mechanical assembly must be represented by an individual section in the BOM.
+ 2. A team is able to estimate the cost of a component if it is unsure of the total value of the component.
+    * This must be stated if the cost is estimated.
 
 ## Resources
 

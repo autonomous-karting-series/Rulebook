@@ -14,11 +14,14 @@ The goal of the Autonomous Karting Series is to create an accessible and excitin
 
 ## Event Structure
 
- 1. There will be multiple Official Practice Sessions throughout a race event and a Official Race Session.
-    1. Official Practice sessions will follow competition safety rules as if the practice session was a Race Session.
-    2. Official Race Session will be 1 kart running on the track at a time.
+ 1. There will be multiple Official Practice Sessions throughout a Race Event and a Official Race Session.
+    * Official Practice sessions will follow competition safety rules as if the practice session was a Race Session.
+    * Official Race Session will be 1 kart running on the track at a time.
+    * Race Events may have Unofficial Practice Sessions.
+      * During Unofficial Practice Sessions, __Secondary Vehicles__ may be used for data collection for development purposes only.
+      * __Secondary Vehicles__ are not allowed on the track at any other time during the Race Event.
  2. Team rankings will be by total time taken to complete the 5 laps.
- 3. The team order in which each category will be run will be decided in order of fastest laps ran during official practice sessions.
+ 3. The team order will be decided in order of fastest laps ran during official practice sessions.
 
 ## Race Track Definition
 
@@ -34,8 +37,8 @@ The goal of the Autonomous Karting Series is to create an accessible and excitin
     1. Data collected using a secondary vehicle is not allowed.
  3. A non-encompassing list of allowed data:
        * GPS waypoints
-       * Track centerline
-       * Track edges
+         * Track centerline
+         * Track edges
        * Track images
        * Track pointcloud
  4. Teams are encouraged to not focus entirely on a predefined run of the track but also take into account track conditions and adapt.
