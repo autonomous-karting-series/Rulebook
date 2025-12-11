@@ -2,6 +2,7 @@
 
 [Rulebook](Rulebook.md)
 [Overview](Overview.md)
+-----------
 
 - [Changes](Changes/changes.md)
 
@@ -12,3 +13,7 @@
 - [Safety](Safety/safety.md)
 - [Software](Software/software.md)
 - [Appendix](Appendix/appendix.md)
+
+-----------
+
+*Last Updated: Dec 11th, 2025*
