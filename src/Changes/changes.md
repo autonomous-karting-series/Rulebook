@@ -27,3 +27,19 @@ Purpose:
       * Components that are needed to be removed and remounted frequently may be secured with a Positively Locking Nut.
       * Electrical wires must be secured with cable ties or similar items.
 ```
+
+#### Safety Required Safety Components
+
+```diff
+    Urgent Stop
+        All teams must prove that they have a switch to trigger an Urgent Stop that has the go-kart come to a safe stop.
+-           Urgent Stop must trigger if a controller leaves range or disconnects.
+        Urgent Stop must be commandable through software
+        Methods of stopping:
+            Automatic stopping on Software Command or Physical Controller trigger.
+            Switching to RC control to stop.
+    Remote Estop must be tied to at minimum a physical controller.
+        Off the shelf Emergency Stop systems are allowed as long as they do not interfere with the track and has a physical trigger.
+        Remote Estop should initiate an Urgent Stop AND Disconnect power to the Drivetrain.
++       Remote Estop must trigger if a controller leaves range or disconnects.
+```
