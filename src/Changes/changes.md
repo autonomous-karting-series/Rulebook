@@ -43,3 +43,12 @@ Purpose:
         Remote Estop should initiate an Urgent Stop AND Disconnect power to the Drivetrain.
 +       Remote Estop must trigger if a controller leaves range or disconnects.
 ```
+
+#### Safety Required General Safety
+
+```diff
++      3. Teams are not allowed to work on the Go-Kart while the Go-Kart is in the following states:
++          * Go-Kart has energized motors. An energized system is a system that has components powered on.
++          * Go-Kart is in Autonomous Mode.
+
+```
