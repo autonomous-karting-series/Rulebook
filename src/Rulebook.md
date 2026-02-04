@@ -57,4 +57,4 @@ Changes in this section are not yet in the official rulebook but overwrite exist
 
 -----------
 
-*Last Updated: Dec 11th, 2025*
+*Last Updated: Feb 3rd, 2026*
