@@ -1,5 +1,11 @@
 # Autonomous Karting Series Official Rulebook
 
+## Minor Changes
+Changes in this section are not yet in the official rulebook but overwrite existing rules. The latest revision of a rule change will take precedence over past rule changes.
+
+- [Changes](Changes/changes.md)
+    - [Jan 25, 2026](Changes/changes.md#update-2026_01_25)
+  
 ## Ruleset Table of Contents
 
 - [Administrative](Administrative/administrative.md)
@@ -48,3 +54,7 @@
     - [Awards](Race_Procedure/race_procedure.md#awards)
 
 - [Appendix](Appendix/Appendix.md)
+
+-----------
+
+*Last Updated: Dec 11th, 2025*
