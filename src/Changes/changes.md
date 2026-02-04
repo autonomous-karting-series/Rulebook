@@ -19,7 +19,7 @@ Purpose:
 
 ### Rule(s) Changed
 
-#### Mechanical Mounting
+#### Mechanical > Mounting
 
 ```diff
 -  1. Any component mounted directly to the chassis not mentioned already must be secured with a threadlocker.
@@ -28,7 +28,32 @@ Purpose:
       * Electrical wires must be secured with cable ties or similar items.
 ```
 
-#### Safety Required Safety Components
+#### Mechanical > Weatherproofing
+
+```diff
+   1. All components mounted to the go-kart chassis that are not rated for exterior use must be contained within an IP65 Rated Container.
+        Containers must use IP65 Rated grommets and fittings for cables and connectors.
+        Containers must have ventilation.
+   2. Examples of components that must be in weather-rated containers:
+        Motor Controller (if not rated for external use)
+        Batteries
+        Computers
+        Microcontrollers
+        Breakout/Distribution Boards
+
++  3. External components that are rated for IP64 (or are generally seen as "weatherproof" without an IP certification) are also allowed.
++  4. Teams who have complications meeting Weatherproofing Requirements may use lower IP64 Ratings, however, there is still the expectations that barring severe weather all go-karts are able to operate.
+```
+
+#### Electrical > Batteries
+
+```diff
+-  7. Auxiliary Battery System Cannot exceed 50V nominal.
++  7. Auxiliary Battery System Cannot exceed Drivetrain (Primary) Battery System.
++    * The intent of the Auxiliary Battery System is to power auxiliary devices such as sensors, computers, and low-level control devices.
+```
+
+#### Safety > Required Safety Components
 
 ```diff
     Urgent Stop
@@ -40,11 +65,12 @@ Purpose:
             Switching to RC control to stop.
     Remote Estop must be tied to at minimum a physical controller.
         Off the shelf Emergency Stop systems are allowed as long as they do not interfere with the track and has a physical trigger.
-        Remote Estop should initiate an Urgent Stop AND Disconnect power to the Drivetrain.
+        Remote Estop should initiate an Urgent Stop AND THEN Disconnect power to the Drivetrain.
++          The Go-kart should be able to re-power and be able to get back to driving without physical intervention.
 +       Remote Estop must trigger if a controller leaves range or disconnects.
 ```
 
-#### Safety Required General Safety
+#### Safety > Required General Safety
 
 ```diff
 +      3. Teams are not allowed to work on the Go-Kart while the Go-Kart is in the following states:
